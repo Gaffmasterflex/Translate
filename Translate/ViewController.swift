@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func translate(_ sender: AnyObject) {
-        
+        print("inital commit from my fork")
         let str = textToTranslate.text
         let escapedStr = str?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
