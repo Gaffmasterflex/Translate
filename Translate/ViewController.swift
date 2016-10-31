@@ -8,21 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource{
+class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate	{
     
     @IBOutlet weak var textToTranslate: UITextView!
     @IBOutlet weak var translatedText: UITextView!
     @IBOutlet weak var languagePicker: UIPickerView!
-    
-    var pickerLanugages: [String] = [String]()
+
+    var pickerLanguages: [String] = ["Gaelic","French","Turkish"]
     var languageDictonary : [String : String] = ["French" : "fr","Turkish" : "tr","Gaelic" : "ga"]
     var selectedLanguage = String()
-    var languageCode = "en|"
+    var languageCode:String = "en|"
     var rowOfLanguageSelection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPickerView()
+        self.textToTranslate.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,11 +35,20 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         self.languagePicker.delegate = self
         self.languagePicker.dataSource = self
         languagePicker.isHidden = true
-        pickerLanugages = ["Gaelic","Turkish","French"]
     }
     
+    //dissmisses keyboard on return key pressed
+    func textView(_ textView : UITextView, shouldChangeTextIn range: NSRange, replacementText text: String)->Bool{
+        if(text == "\n"){
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    
     @nonobjc func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerLanugages.count
+        return pickerLanguages.count
     }
 
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -46,19 +56,19 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerLanugages[row]
+        return pickerLanguages[row]
     }
     
     // The number of rows of data
      func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerLanugages.count
+        return pickerLanguages.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         // use the row to get the selected row from the picker view
         // using the row extract the value from your datasource (array[row])
-        print("Item selected is \(pickerLanugages[row])")
-        selectedLanguage = pickerLanugages[row]
+        print("Item selected is \(pickerLanguages[row])")
+        selectedLanguage = pickerLanguages[row]
         rowOfLanguageSelection = row
     }
    
@@ -70,10 +80,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     @IBAction func translate(_ sender: AnyObject) {
         let str = textToTranslate.text
         let escapedStr = str?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let langStr = (languageCode + pickerLanguages[rowOfLanguageSelection]).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
-        let langStr = (languageCode+=languageDictonary[pickerLanugages[rowOfLanguageSelection]]).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-        
-        print("langStr")
+        print(langStr!)
         let urlStr:String = ("https://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
         
         let url = URL(string: urlStr)
@@ -108,7 +117,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
                 self.translatedText.text = result
             }
         }
-        
+        //when the translation is done make a function which resets all variables to be reused
     }
 }
 
