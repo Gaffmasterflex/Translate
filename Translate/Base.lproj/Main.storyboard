@@ -319,9 +319,10 @@
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-4r-T55">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="- Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-4r-T55">
+                                <frame key="frameInset" minX="25" minY="212" width="268" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="4ev-Lx-ZB2"/>
+                                    <constraint firstAttribute="width" constant="268" id="4ev-Lx-ZB2"/>
                                     <constraint firstAttribute="height" constant="21" id="Bin-vI-GDg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
@@ -336,7 +337,8 @@
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- What's your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYh-Qo-AH9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="- What's your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYh-Qo-AH9">
+                                <frame key="frameInset" minX="25" minY="279" width="268" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="p2v-Zk-nsi"/>
                                 </constraints>
@@ -352,7 +354,8 @@
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- My name is Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmd-WY-vid">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="- My name is Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmd-WY-vid">
+                                <frame key="frameInset" minX="25" minY="351" width="268" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VNm-tj-4vA"/>
                                 </constraints>
@@ -368,7 +371,8 @@
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Where is the hotel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2y-Gv-QvK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="- Where is the hotel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2y-Gv-QvK">
+                                <frame key="frameInset" minX="25" minY="431" width="268" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0nC-Mb-Waa"/>
                                 </constraints>
@@ -376,7 +380,7 @@
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes/No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6le-nu-Gch">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yep/Nope" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6le-nu-Gch">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="UM3-i0-oKz"/>
                                 </constraints>
@@ -384,7 +388,8 @@
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Oui/Non" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmG-xj-3NO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="- Yes/No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmG-xj-3NO">
+                                <frame key="frameInset" minX="25" minY="506" width="268" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2D5-hR-44d"/>
                                 </constraints>
@@ -392,12 +397,13 @@
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiL-RP-Ru9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the price?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiL-RP-Ru9">
                                 <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Combien?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d7-SE-AdC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="- How much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d7-SE-AdC">
+                                <frame key="frameInset" minX="25" minY="582" width="268" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="fvD-KG-L2o"/>
                                 </constraints>
@@ -409,7 +415,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EmG-xj-3NO" firstAttribute="top" secondItem="IFx-iz-6WM" secondAttribute="bottom" constant="25" id="1at-zx-CSJ"/>
-                            <constraint firstItem="aW8-BL-Aei" firstAttribute="trailing" secondItem="1mP-xq-khi" secondAttribute="trailing" constant="38" id="2ni-Cf-IfH"/>
+                            <constraint firstItem="aW8-BL-Aei" firstAttribute="trailing" secondItem="1mP-xq-khi" secondAttribute="trailing" id="2ni-Cf-IfH"/>
                             <constraint firstItem="1mP-xq-khi" firstAttribute="leading" secondItem="i6h-kS-Hsv" secondAttribute="leading" id="6UL-Rc-Eik"/>
                             <constraint firstItem="6le-nu-Gch" firstAttribute="trailing" secondItem="TiL-RP-Ru9" secondAttribute="trailing" id="6jp-yE-I2A"/>
                             <constraint firstItem="0d7-SE-AdC" firstAttribute="top" secondItem="6le-nu-Gch" secondAttribute="bottom" constant="26" id="7v3-j4-opX"/>
@@ -421,7 +427,7 @@
                             <constraint firstItem="Cmd-WY-vid" firstAttribute="leading" secondItem="q2y-Gv-QvK" secondAttribute="leading" id="FCr-ne-ezO"/>
                             <constraint firstItem="hqt-p4-X1u" firstAttribute="height" secondItem="Mek-c0-Tx2" secondAttribute="height" id="FtR-wN-RPs"/>
                             <constraint firstItem="aW8-BL-Aei" firstAttribute="top" secondItem="9Zw-4r-T55" secondAttribute="bottom" constant="8" id="GeT-BS-Dvt"/>
-                            <constraint firstItem="9Zw-4r-T55" firstAttribute="leading" secondItem="Mek-c0-Tx2" secondAttribute="leadingMargin" constant="9" id="KJp-Qs-a7W"/>
+                            <constraint firstItem="9Zw-4r-T55" firstAttribute="leading" secondItem="Mek-c0-Tx2" secondAttribute="leadingMargin" constant="5" id="KJp-Qs-a7W"/>
                             <constraint firstItem="9Zw-4r-T55" firstAttribute="trailing" secondItem="oYh-Qo-AH9" secondAttribute="trailing" id="NVz-AH-70R"/>
                             <constraint firstItem="oYh-Qo-AH9" firstAttribute="trailing" secondItem="Cmd-WY-vid" secondAttribute="trailing" id="PUb-j5-Xvd"/>
                             <constraint firstItem="aW8-BL-Aei" firstAttribute="leading" secondItem="Mek-c0-Tx2" secondAttribute="leadingMargin" constant="28" id="Pwp-8l-WoH"/>
@@ -441,7 +447,7 @@
                             <constraint firstItem="Cmd-WY-vid" firstAttribute="top" secondItem="1mP-xq-khi" secondAttribute="bottom" constant="22" id="kch-Cq-zas"/>
                             <constraint firstItem="IFx-iz-6WM" firstAttribute="top" secondItem="q2y-Gv-QvK" secondAttribute="bottom" constant="8" symbolic="YES" id="s1e-ey-9L6"/>
                             <constraint firstItem="aW8-BL-Aei" firstAttribute="leading" secondItem="1mP-xq-khi" secondAttribute="leading" id="sGb-v4-1UO"/>
-                            <constraint firstItem="1mP-xq-khi" firstAttribute="trailing" secondItem="i6h-kS-Hsv" secondAttribute="trailing" constant="9" id="uKz-Pf-cq7"/>
+                            <constraint firstItem="1mP-xq-khi" firstAttribute="trailing" secondItem="i6h-kS-Hsv" secondAttribute="trailing" id="uKz-Pf-cq7"/>
                             <constraint firstItem="q2y-Gv-QvK" firstAttribute="leading" secondItem="EmG-xj-3NO" secondAttribute="leading" id="up7-FR-drh"/>
                             <constraint firstItem="6le-nu-Gch" firstAttribute="top" secondItem="EmG-xj-3NO" secondAttribute="bottom" constant="8" symbolic="YES" id="weh-cS-ERi"/>
                             <constraint firstItem="IFx-iz-6WM" firstAttribute="leading" secondItem="6le-nu-Gch" secondAttribute="leading" id="xnP-SZ-Cya"/>
@@ -452,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAH-ND-Xis" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2409" y="-236"/>
+            <point key="canvasLocation" x="2408.8000000000002" y="-236.13193403298354"/>
         </scene>
         <!--Gaelic Phrases-->
         <scene sceneID="0RL-Qx-oq1">
