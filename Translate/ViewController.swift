@@ -145,12 +145,10 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         print("The language code has been reset after the translation :" + languageCode)
     }
     
-    @IBAction func translate(_ sender: AnyObject) {
+    //calls to the web service api on a thread and sends back a completion when done
+    func getTranslation(textToTranslate: String, completion: @escaping (String) ->Void){
         
-        //if text box is nil display a label telling the user
-        
-        let str = textToTranslate.text
-        let escapedStr = str?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let escapedStr = textToTranslate.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let langStr = (languageCode + languageDictonary[pickerLanguages[rowOfLanguageSelection]]!).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
         print("In translate method and the new langStr is \(languageCode + languageDictonary[pickerLanguages[rowOfLanguageSelection]]!)")
@@ -160,14 +158,12 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         
         let url = URL(string: urlStr)
         
-        //let request = URLRequest(url: url!)// Creating Http Request
-        
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
         indicator.center = view.center
         view.addSubview(indicator)
-        
         var result: String = "<Translation Error>"
-        result = URLSession.shared.dataTask(with: url!){ (data, response, error) in
+
+        URLSession.shared.dataTask(with: url!, completionHandler: { data, response, error in
             indicator.startAnimating()
 
             if let httpResponse = response as? HTTPURLResponse{
@@ -175,23 +171,32 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
                     
                     print("Successful connection")
                     let jsonDict: NSDictionary!=(try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)) as! NSDictionary
-                            
+                    
                     if(jsonDict.value(forKey: "responseStatus") as! NSNumber == 200){
                         print("json had a successful connection")
                         let responseData: NSDictionary = jsonDict.object(forKey: "responseData") as! NSDictionary
                         result = responseData.object(forKey: "translatedText") as! String
                         print("result from json call is \(result)")
-                        
                     }
                 }
             }
-        }.resume()
-        print("past json section")
-        indicator.stopAnimating()
-       
-        self.translatedText.textColor = UIColor.black
-        self.reset()
+            completion(result)
+        }).resume()
+
     }
     
-    func updateTranslatedTextView
+    //calls getTranslated text to make up full translation functionality
+    @IBAction func translate(_ sender: AnyObject) {
+        //if text box is nil display a label telling the user
+        
+        //gets the translation and updates the view
+        getTranslation(textToTranslate: textToTranslate.text, completion: {text in
+            DispatchQueue.main.async {
+                self.translatedText.text = text
+                self.translatedText.textColor = UIColor.black
+            }
+        })
+        reset()
+    }
+    
 }
