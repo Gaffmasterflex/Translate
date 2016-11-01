@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A86B64991DC8D650001BAF51 /* temp_storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B64981DC8D650001BAF51 /* temp_storyboard.swift */; };
+		A8A5BAB61DC8C25800595892 /* language-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = A8A5BAB51DC8C25800595892 /* language-codes.json */; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
 		FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* ViewController.swift */; };
 		FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BA1BD1101A00F54057 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A86B64981DC8D650001BAF51 /* temp_storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = temp_storyboard.swift; sourceTree = "<group>"; };
+		A8A5BAB51DC8C25800595892 /* language-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "language-codes.json"; path = "Translate/language-codes.json"; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD2F9B81BD1101A00F54057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,9 +39,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8A5BAB71DC8C27F00595892 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A8A5BAB51DC8C25800595892 /* language-codes.json */,
+				A86B64981DC8D650001BAF51 /* temp_storyboard.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		FFD2F9AA1BD1101A00F54057 = {
 			isa = PBXGroup;
 			children = (
+				A8A5BAB71DC8C27F00595892 /* Data */,
 				FFD2F9B51BD1101A00F54057 /* Translate */,
 				FFD2F9B41BD1101A00F54057 /* Products */,
 			);
@@ -124,6 +138,7 @@
 			files = (
 				FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */,
 				FFD2F9BE1BD1101A00F54057 /* Assets.xcassets in Resources */,
+				A8A5BAB61DC8C25800595892 /* language-codes.json in Resources */,
 				FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +152,7 @@
 			files = (
 				FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */,
 				FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */,
+				A86B64991DC8D650001BAF51 /* temp_storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

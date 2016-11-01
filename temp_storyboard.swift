@@ -1,10 +1,20 @@
 //
+//  temp_storyboard.swift
+//  Translate
+//
+//  Created by 20067423 on 01/11/2016.
+//  Copyright © 2016 WIT. All rights reserved.
+//
+
+import Foundation
+//
 //  ViewController.swift
 //  Translate
 //
 //  Created by Robert O'Connor on 16/10/2015.
 //  Copyright © 2015 WIT. All rights reserved.
 //
+/*
 import UIKit
 
 class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate	{
@@ -146,9 +156,6 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     }
     
     @IBAction func translate(_ sender: AnyObject) {
-        
-        //if text box is nil display a label telling the user
-        
         let str = textToTranslate.text
         let escapedStr = str?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let langStr = (languageCode + languageDictonary[pickerLanguages[rowOfLanguageSelection]]!).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
@@ -158,40 +165,45 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         print(langStr!)
         let urlStr:String = ("https://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
         
-        let url = URL(string: urlStr)
+        //let url = URL(string: urlStr)
         
-        //let request = URLRequest(url: url!)// Creating Http Request
-        
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        var request = URLRequest(url: URL(string: urlStr)!)
+        request.httpMethod = "POST"
+        let session = URLSession.shared
+        var result = "<Translation Error>"
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         indicator.center = view.center
         view.addSubview(indicator)
+        indicator.startAnimating()
         
-        var result: String = "<Translation Error>"
-        result = URLSession.shared.dataTask(with: url!){ (data, response, error) in
-            indicator.startAnimating()
-
-            if let httpResponse = response as? HTTPURLResponse{
-                if (httpResponse.statusCode == 200){
+        session.dataTask(with: request){data , response, error in
+            guard error == nil else{
+                print(error)
+                return
+            }
+            guard let data = data else{
+                print("Data is empty")
+                return
+            }
+            if let httpResponse = response as? HTTPURLResponse {
+                if(httpResponse.statusCode == 200){
                     
-                    print("Successful connection")
-                    let jsonDict: NSDictionary!=(try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)) as! NSDictionary
-                            
+                    let jsonDict: NSDictionary!=(try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)) as! NSDictionary
+                    
                     if(jsonDict.value(forKey: "responseStatus") as! NSNumber == 200){
-                        print("json had a successful connection")
                         let responseData: NSDictionary = jsonDict.object(forKey: "responseData") as! NSDictionary
-                        result = responseData.object(forKey: "translatedText") as! String
-                        print("result from json call is \(result)")
                         
+                        result = responseData.object(forKey: "translatedText") as! String
                     }
                 }
+                
+                self.translatedText.text = result
+                self.translatedText.textColor = UIColor.black
             }
-        }.resume()
-        print("past json section")
-        indicator.stopAnimating()
-       
-        self.translatedText.textColor = UIColor.black
-        self.reset()
+            }.resume()
+        
+        //when the translation is done reset all variables to be reused
+        reset()
     }
-    
-    func updateTranslatedTextView
 }
+*/
