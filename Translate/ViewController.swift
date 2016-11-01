@@ -16,6 +16,8 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     
     @IBOutlet weak var chooseLanguageButton: UIButton!
     @IBOutlet weak var pickerSelectorDoneButton: UIButton!
+    let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    //toast label for when user tries to translate empty message
     
     var pickerLanguages: [String] = ["Gaelic","French","Turkish"] //data for picker
     var languageDictonary : [String : String] = ["French" : "fr","Turkish" : "tr","Gaelic" : "ga"]
@@ -139,8 +141,8 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         self.pickerSelectorDoneButton.isEnabled = true
     }
     
+    //reset the language pair to it's original state
     func reset(){
-        //reset query string
         languageCode = "en|"
         print("The language code has been reset after the translation :" + languageCode)
     }
@@ -148,6 +150,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     //calls to the web service api on a thread and sends back a completion when done
     func getTranslation(textToTranslate: String, completion: @escaping (String) ->Void){
         
+        //create url string
         let escapedStr = textToTranslate.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let langStr = (languageCode + languageDictonary[pickerLanguages[rowOfLanguageSelection]]!).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
@@ -158,13 +161,16 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         
         let url = URL(string: urlStr)
         
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
-        indicator.center = view.center
-        view.addSubview(indicator)
+       
         var result: String = "<Translation Error>"
-
+        
+        self.loadingIndicator.center = self.view.center;
+        self.loadingIndicator.hidesWhenStopped = true
+        self.loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        self.loadingIndicator.startAnimating()
+        print("Indicator started")
+        //set up web session
         URLSession.shared.dataTask(with: url!, completionHandler: { data, response, error in
-            indicator.startAnimating()
 
             if let httpResponse = response as? HTTPURLResponse{
                 if (httpResponse.statusCode == 200){
@@ -180,6 +186,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
                     }
                 }
             }
+            print("Indicator stopped")
             completion(result)
         }).resume()
 
@@ -188,10 +195,17 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     //calls getTranslated text to make up full translation functionality
     @IBAction func translate(_ sender: AnyObject) {
         //if text box is nil display a label telling the user
+        if(translatedText.text.isEmpty){
+            //display label and return from func
+            return
+        }
         
         //gets the translation and updates the view
         getTranslation(textToTranslate: textToTranslate.text, completion: {text in
+           
             DispatchQueue.main.async {
+                self.loadingIndicator.stopAnimating()
+
                 self.translatedText.text = text
                 self.translatedText.textColor = UIColor.black
             }
