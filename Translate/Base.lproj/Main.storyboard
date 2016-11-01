@@ -53,12 +53,24 @@
                                     <action selector="onChooseLanguagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="suL-9p-keZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YS-P1-DhZ">
+                                <frame key="frameInset" minX="151" minY="546" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89866246729999999" green="0.89866246729999999" blue="0.89866246729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="onPickerSelectorDonePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ae-l7-bEN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="chooseLanguageButton" destination="nCX-hn-5zL" id="qWS-0I-Ep2"/>
                         <outlet property="languagePicker" destination="ix0-kJ-hdM" id="eAV-zL-jMh"/>
+                        <outlet property="pickerSelectorDoneButton" destination="1YS-P1-DhZ" id="BCb-vx-hYu"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="KzX-Xq-gkN"/>
+                        <outlet property="translateButton" destination="Tk9-7M-DEK" id="wZr-wC-vF8"/>
                         <outlet property="translatedText" destination="LaV-KV-DTJ" id="mVU-ud-gd0"/>
                     </connections>
                 </viewController>

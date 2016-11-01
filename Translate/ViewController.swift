@@ -13,17 +13,26 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var textToTranslate: UITextView!
     @IBOutlet weak var translatedText: UITextView!
     @IBOutlet weak var languagePicker: UIPickerView!
-
-    var pickerLanguages: [String] = ["Gaelic","French","Turkish"]
+    @IBOutlet weak var translateButton: UIButton!
+    
+    @IBOutlet weak var chooseLanguageButton: UIButton!
+    @IBOutlet weak var pickerSelectorDoneButton: UIButton!
+    
+    var pickerLanguages: [String] = ["Gaelic","French","Turkish"] //data for picker
     var languageDictonary : [String : String] = ["French" : "fr","Turkish" : "tr","Gaelic" : "ga"]
     var selectedLanguage = String()
     var languageCode:String = "en|"
-    var rowOfLanguageSelection = 0
+    var rowOfLanguageSelection = 0  //used to access the data array at the user specified index
+    
+    //placeholders for uitext elements
+    let textToTranslatePlaceholder = "Text to Translate....."
+    let translatedTextPlaceHolder = "Translated Text....."
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPickerView()
-        self.textToTranslate.delegate = self
+        setUpTextViews()
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,10 +40,39 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         // Dispose of any resources that can be recreated.
     }
     
+    func setUpTextViews(){
+        self.textToTranslate.delegate = self
+        textToTranslate.text = textToTranslatePlaceholder
+        textToTranslate.textColor = UIColor.lightGray
+        
+        
+        self.translatedText.delegate = self
+        translatedText.text = translatedTextPlaceHolder
+        translatedText.textColor = UIColor.lightGray
+    }
+    
+    //when user starts editing the text view
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if(textView.textColor == UIColor.lightGray){
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    //when the view is done editing
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = textToTranslatePlaceholder
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
     func setUpPickerView(){
         self.languagePicker.delegate = self
         self.languagePicker.dataSource = self
         languagePicker.isHidden = true
+        pickerSelectorDoneButton.isEnabled = false
+        pickerSelectorDoneButton.isHidden = true
     }
     
     //dissmisses keyboard on return key pressed
@@ -46,6 +84,21 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         return true
     }
     
+    @IBAction func onPickerSelectorDonePressed(_ sender: UIButton) {
+        //hide selector
+        languagePicker.isHidden = true
+        //hide button
+        sender.isHidden = true
+        //disable button
+        sender.isEnabled = false
+        //get row and make it the string
+        selectedLanguage = pickerLanguages[rowOfLanguageSelection]
+        
+        translateButton.isEnabled = true
+        translateButton.isHidden = false
+        chooseLanguageButton.isHidden = false
+        chooseLanguageButton.isEnabled = true
+    }
     
     @nonobjc func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerLanguages.count
@@ -68,19 +121,37 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         // use the row to get the selected row from the picker view
         // using the row extract the value from your datasource (array[row])
         print("Item selected is \(pickerLanguages[row])")
-        selectedLanguage = pickerLanguages[row]
         rowOfLanguageSelection = row
     }
    
     
     @IBAction func onChooseLanguagePressed(_ sender: UIButton) {
+        //show the picker
         languagePicker.isHidden = false
+        
+        //hide the other buttons and set enabled to false
+        sender.isHidden = true
+        sender.isEnabled = false
+        self.translateButton.isHidden = true
+        self.translateButton.isEnabled = false
+        
+        //show and enable done button for language selection
+        self.pickerSelectorDoneButton.isHidden = false
+        self.pickerSelectorDoneButton.isEnabled = true
+    }
+    
+    func reset(){
+        //reset query string
+        languageCode = "en|"
+        print("The language code has been reset after the translation :" + languageCode)
     }
     
     @IBAction func translate(_ sender: AnyObject) {
         let str = textToTranslate.text
         let escapedStr = str?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-        let langStr = (languageCode + pickerLanguages[rowOfLanguageSelection]).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let langStr = (languageCode + languageDictonary[pickerLanguages[rowOfLanguageSelection]]!).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        
+        print("In translate method and the new langStr is \(languageCode + languageDictonary[pickerLanguages[rowOfLanguageSelection]]!)")
         
         print(langStr!)
         let urlStr:String = ("https://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
@@ -88,8 +159,6 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         let url = URL(string: urlStr)
         
         let request = URLRequest(url: url!)// Creating Http Request
-        
-        //var data = NSMutableData()var data = NSMutableData()
         
         let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         indicator.center = view.center
@@ -115,9 +184,11 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
                 }
                 
                 self.translatedText.text = result
+                self.translatedText.textColor = UIColor.black
             }
         }
-        //when the translation is done make a function which resets all variables to be reused
+        //when the translation is done reset all variables to be reused
+        reset()
     }
 }
 
