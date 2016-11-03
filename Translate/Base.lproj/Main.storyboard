@@ -6,6 +6,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-B.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+        <array key="Ubuntu-C.ttf">
+            <string>UbuntuCondensed-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,12 +32,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="Fiy-el-vh5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;Translated Text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-KV-DTJ">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ix0-kJ-hdM">
@@ -44,7 +52,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="9mp-pb-s8K"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -52,7 +60,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7Ed-XX-JTU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -62,6 +70,7 @@
                                     <constraint firstAttribute="width" constant="160" id="Phm-WE-DNd"/>
                                     <constraint firstAttribute="height" constant="30" id="h1t-It-8nN"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
                                 <state key="normal" title="Translate"/>
                                 <connections>
                                     <action selector="translate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N4O-5e-QcF"/>
@@ -72,6 +81,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="159" id="xsm-N7-rGd"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
                                 <state key="normal" title="Choose Language"/>
                                 <connections>
                                     <action selector="onChooseLanguagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHN-yc-UQM"/>
@@ -79,6 +89,7 @@
                             </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YS-P1-DhZ">
                                 <color key="backgroundColor" red="0.22446044498305578" green="0.82547644389237407" blue="0.61614998197971382" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="onPickerSelectorDonePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ae-l7-bEN"/>

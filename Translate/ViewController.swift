@@ -79,7 +79,12 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     
     func updateDestinationLanguageLabel(){
         //set up dest language label
-        self.destinationLanguageLabel.text = "Destination Language: " + pickerLanguages[rowOfLanguageSelection]
+        let destStr : NSString = "Destination Language: " + pickerLanguages[rowOfLanguageSelection] as NSString
+        
+        let destinationLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: destStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
+        
+        destinationLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: 22, length: pickerLanguages[rowOfLanguageSelection].characters.count))
+        self.destinationLanguageLabel.attributedText = destinationLanguage
     }
     
     //set up the text views and delegates
