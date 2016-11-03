@@ -96,7 +96,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func updateSourceLanguageLabel(language: String){
-        let sourceStr : NSString = "Destination Language: " + language as NSString
+        let sourceStr : NSString = "Source Language: " + language as NSString
         
         let sourceLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: sourceStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
         
