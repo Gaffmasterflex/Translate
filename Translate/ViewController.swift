@@ -24,11 +24,11 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     //toast label for when user tries to translate empty message
     
-    var pickerLanguages: [String] = ["Gaelic","French","Turkish"] //data for picker
-    var languageDictonary : [String : String] = ["French" : "fr","Turkish" : "tr","Gaelic" : "ga"]
+    var pickerLanguages: [String] = ["Gaelic","French","Turkish","English"] //data for picker
+    var languageDictonary : [String : String] = ["French" : "fr","Turkish" : "tr","Gaelic" : "ga","English" : "en"]
     
     //make an array of the language codes for lookups
-    var languageCodes : [String] = ["fr","tr","ga"]
+    var languageCodes : [String] = ["fr","tr","ga","en"]
     
     var selectedLanguage = String()
     //sets up default language code as current devices language
@@ -65,17 +65,29 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func setUpLanguagePairLabels(){
-        //set up source language label
+        updateSourceLanguageLabel()
+        updateDestinationLanguageLabel()
+    }
+    
+    func updateSourceLanguageLabel(){
         let strippedSourceLanugageCode = languageCode.replacingOccurrences(of: "|", with: "")
+
         for(key,value) in languageDictonary{
             if(value == strippedSourceLanugageCode){
-                self.sourceLanguageLabel.text! += key
+                
+                //set up source language label
+                let sourceStr : NSString = "Source Language: " + key as NSString
+                
+                let sourceLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: sourceStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
+                
+                sourceLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: 17, length: key.characters.count))
+                
+                self.sourceLanguageLabel.attributedText = sourceLanguage
                 break
             }
         }
-        
-        updateDestinationLanguageLabel()
     }
+    
     
     func updateDestinationLanguageLabel(){
         //set up dest language label
@@ -148,7 +160,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         chooseLanguageButton.isHidden = false
         chooseLanguageButton.isEnabled = true
         print("done pressed")
-        updateDestinationLanguageLabel()
+        setUpLanguagePairLabels()
     }
     
     //picker protocol methods
