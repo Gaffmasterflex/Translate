@@ -110,6 +110,11 @@
 					FFD2F9B21BD1101A00F54057 = {
 						CreatedOnToolsVersion = 7.0;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

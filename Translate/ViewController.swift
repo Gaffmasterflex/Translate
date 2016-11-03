@@ -16,6 +16,8 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     
     @IBOutlet weak var chooseLanguageButton: UIButton!
     @IBOutlet weak var pickerSelectorDoneButton: UIButton!
+    
+    //ui indicator
     let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     //toast label for when user tries to translate empty message
     
@@ -164,14 +166,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
        
         var result: String = "<Translation Error>"
         
-        self.loadingIndicator.center = self.view.center;
-        self.loadingIndicator.hidesWhenStopped = true
-        self.loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
-        self.loadingIndicator.startAnimating()
-        print("Indicator started")
-        //set up web session
+               //set up web session
         URLSession.shared.dataTask(with: url!, completionHandler: { data, response, error in
-
+            
             if let httpResponse = response as? HTTPURLResponse{
                 if (httpResponse.statusCode == 200){
                     
@@ -186,7 +183,6 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
                     }
                 }
             }
-            print("Indicator stopped")
             completion(result)
         }).resume()
 
@@ -200,9 +196,20 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
             return
         }
         
+        //indicator needs to be displayed on main thread
+        DispatchQueue.main.async {
+            self.view.addSubview(self.loadingIndicator)
+            self.loadingIndicator.center = self.view.center;
+            self.loadingIndicator.hidesWhenStopped = true
+            self.loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            self.loadingIndicator.startAnimating()
+            print("Should be animating indicator")
+        }
+
         //gets the translation and updates the view
         getTranslation(textToTranslate: textToTranslate.text, completion: {text in
            
+            //ui needs to be updated on main thread i.e inidcator and text views
             DispatchQueue.main.async {
                 self.loadingIndicator.stopAnimating()
 
