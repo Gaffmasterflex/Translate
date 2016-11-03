@@ -24,7 +24,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     //toast label for when user tries to translate empty message
     
-    var pickerLanguages: [String] = ["Gaelic","French","Turkish","English"] //data for picker
+    //source/destination arrays
+    var pickerLanguages: [[String]] = [["Gaelic","French","Turkish","English"],["Gaelic","French","Turkish","English"]] //data for picker
+    
     var languageDictonary : [String : String] = ["French" : "fr","Turkish" : "tr","Gaelic" : "ga","English" : "en"]
     
     //make an array of the language codes for lookups
@@ -33,8 +35,11 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     var selectedLanguage = String()
     //sets up default language code as current devices language
     var languageCode = String()
-    var rowOfLanguageSelection = 0  //used to access the data array at the user specified index
-    
+    var rowOfSourceLanguageSelection = 0  //used to access the data array at the user specified index
+    var rowOfDestLanguageSelection = 0
+    //index of selected language
+    var indexOfSourceLanguage = 0
+    var indexOfDestLanguage = 0
     //placeholders for uitext elements
     let textToTranslatePlaceholder = "Text to Translate....."
     let translatedTextPlaceHolder = "Translated Text....."
@@ -65,13 +70,14 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     }
     
     func setUpLanguagePairLabels(){
-        updateSourceLanguageLabel()
-        updateDestinationLanguageLabel()
+        setUpDefaultSourceLanguageLabel()
+        updateDestinationLanguageLabel(language: pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage])
     }
     
-    func updateSourceLanguageLabel(){
+    //checks default language of device against dictionary and updates view accordingly
+    func setUpDefaultSourceLanguageLabel(){
         let strippedSourceLanugageCode = languageCode.replacingOccurrences(of: "|", with: "")
-
+        
         for(key,value) in languageDictonary{
             if(value == strippedSourceLanugageCode){
                 
@@ -86,16 +92,25 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
                 break
             }
         }
+
     }
     
+    func updateSourceLanguageLabel(language: String){
+        let sourceStr : NSString = "Destination Language: " + language as NSString
+        
+        let sourceLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: sourceStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
+        
+        sourceLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: 22, length: pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage].characters.count))
+        self.sourceLanguageLabel.attributedText = sourceLanguage
+    }
     
-    func updateDestinationLanguageLabel(){
+    func updateDestinationLanguageLabel(language: String){
         //set up dest language label
-        let destStr : NSString = "Destination Language: " + pickerLanguages[rowOfLanguageSelection] as NSString
+        let destStr : NSString = "Destination Language: " + language as NSString
         
         let destinationLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: destStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
         
-        destinationLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: 22, length: pickerLanguages[rowOfLanguageSelection].characters.count))
+        destinationLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: 22, length: pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage].characters.count))
         self.destinationLanguageLabel.attributedText = destinationLanguage
     }
     
@@ -131,7 +146,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         self.languagePicker.delegate = self
         self.languagePicker.dataSource = self
         languagePicker.isHidden = true
-       // pickerSelectorDoneButton.isEnabled = false
+        pickerSelectorDoneButton.isEnabled = false
         pickerSelectorDoneButton.isHidden = true
     }
     
@@ -152,40 +167,47 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         sender.isHidden = true
         //disable button
         sender.isEnabled = false
-        //get row and make it the string
-        selectedLanguage = pickerLanguages[rowOfLanguageSelection]
         
         translateButton.isEnabled = true
         translateButton.isHidden = false
         chooseLanguageButton.isHidden = false
         chooseLanguageButton.isEnabled = true
         print("done pressed")
-        setUpLanguagePairLabels()
+        
+        //update labels
+        updateSourceLanguageLabel(language: pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage])
+        updateDestinationLanguageLabel(language: pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage])
     }
     
-    //picker protocol methods
-    @nonobjc func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerLanguages.count
-    }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        print("number of componets was called ")
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerLanguages[row]
+        return pickerLanguages[component][row]
     }
-    
     // The number of rows of data
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerLanguages.count
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) ->Int{
+        return pickerLanguages[component].count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         // use the row to get the selected row from the picker view
         // using the row extract the value from your datasource (array[row])
-        print("Item selected is \(pickerLanguages[row])")
-        rowOfLanguageSelection = row
+        print("Item selected is \(pickerLanguages[component][row])")
+   
+        print("component is: \(component)")
+        if(component == 0){
+            rowOfSourceLanguageSelection = component
+            indexOfSourceLanguage = row
+            print("Source lang selected: \(pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage])")
+        }else{
+            rowOfDestLanguageSelection = component
+            indexOfDestLanguage = row
+            print("Destination lang selected: \(pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage])")
+        }
     }
     
     //choose language button pressed
@@ -205,10 +227,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         print("done button shoud be enabled")
     }
     
-    //reset the language pair to it's original state
-    func reset(){
-        languageCode = "en|"
-        print("The language code has been reset after the translation :" + languageCode)
+    //returns the langPair codes
+    func getLanguageCodes() -> String{
+        return languageDictonary[pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage]]! + "|" + languageDictonary[pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage]]!
     }
     
     //calls to the web service api on a thread and sends back a completion when done
@@ -216,9 +237,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         
         //create url string
         let escapedStr = textToTranslate.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-        let langStr = (languageCode + languageDictonary[pickerLanguages[rowOfLanguageSelection]]!).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let langStr = (getLanguageCodes()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         
-        print("In translate method and the new langStr is \(languageCode + languageDictonary[pickerLanguages[rowOfLanguageSelection]]!)")
+        print("In translate method and the new langStr is \(getLanguageCodes())")
         
         print(langStr!)
         let urlStr:String = ("https://api.mymemory.translated.net/get?q="+escapedStr!+"&langpair="+langStr!)
@@ -278,9 +299,6 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
                 }
             }
         })
-        
-        //reset variables to allow next translation
-        reset()
     }
     
 }
