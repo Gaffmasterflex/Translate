@@ -17,14 +17,22 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var chooseLanguageButton: UIButton!
     @IBOutlet weak var pickerSelectorDoneButton: UIButton!
     
+    @IBOutlet weak var sourceLanguageLabel: UILabel!
+    @IBOutlet weak var destinationLanguageLabel: UILabel!
+    
     //ui indicator
     let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     //toast label for when user tries to translate empty message
     
     var pickerLanguages: [String] = ["Gaelic","French","Turkish"] //data for picker
     var languageDictonary : [String : String] = ["French" : "fr","Turkish" : "tr","Gaelic" : "ga"]
+    
+    //make an array of the language codes for lookups
+    var languageCodes : [String] = ["fr","tr","ga"]
+    
     var selectedLanguage = String()
-    var languageCode:String = "en|"
+    //sets up default language code as current devices language
+    var languageCode = String()
     var rowOfLanguageSelection = 0  //used to access the data array at the user specified index
     
     //placeholders for uitext elements
@@ -36,6 +44,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         super.viewDidLoad()
         setUpPickerView()
         setUpTextViews()
+        setDefaultSourceLanguage()
+        setUpLanguagePairLabels()
+        print("The language code should be set to default of device \(languageCode)")
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,6 +54,35 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         // Dispose of any resources that can be recreated.
     }
     
+    //sets up default language as the default device language if it's supported , english otherwise
+    func setDefaultSourceLanguage(){
+        languageCode = (isLanguageSupported(language: NSLocale.current.languageCode!)) ? NSLocale.current.languageCode! + "|" : "en|"
+    }
+    
+    //checks to see if the lanugae used is supported (used for setting up default language)
+    func isLanguageSupported(language: String)->Bool{
+        return languageCodes.contains(language)
+    }
+    
+    func setUpLanguagePairLabels(){
+        //set up source language label
+        let strippedSourceLanugageCode = languageCode.replacingOccurrences(of: "|", with: "")
+        for(key,value) in languageDictonary{
+            if(value == strippedSourceLanugageCode){
+                self.sourceLanguageLabel.text! += key
+                break
+            }
+        }
+        
+        updateDestinationLanguageLabel()
+    }
+    
+    func updateDestinationLanguageLabel(){
+        //set up dest language label
+        self.destinationLanguageLabel.text = "Destination Language: " + pickerLanguages[rowOfLanguageSelection]
+    }
+    
+    //set up the text views and delegates
     func setUpTextViews(){
         self.textToTranslate.delegate = self
         textToTranslate.text = textToTranslatePlaceholder
@@ -74,7 +114,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         self.languagePicker.delegate = self
         self.languagePicker.dataSource = self
         languagePicker.isHidden = true
-        pickerSelectorDoneButton.isEnabled = false
+       // pickerSelectorDoneButton.isEnabled = false
         pickerSelectorDoneButton.isHidden = true
     }
     
@@ -87,6 +127,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         return true
     }
     
+    //done button pressed when picking language in the picker
     @IBAction func onPickerSelectorDonePressed(_ sender: UIButton) {
         //hide selector
         languagePicker.isHidden = true
@@ -101,8 +142,11 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         translateButton.isHidden = false
         chooseLanguageButton.isHidden = false
         chooseLanguageButton.isEnabled = true
+        print("done pressed")
+        updateDestinationLanguageLabel()
     }
     
+    //picker protocol methods
     @nonobjc func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerLanguages.count
     }
@@ -127,7 +171,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         rowOfLanguageSelection = row
     }
     
-    
+    //choose language button pressed
     @IBAction func onChooseLanguagePressed(_ sender: UIButton) {
         //show the picker
         languagePicker.isHidden = false
@@ -141,6 +185,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         //show and enable done button for language selection
         self.pickerSelectorDoneButton.isHidden = false
         self.pickerSelectorDoneButton.isEnabled = true
+        print("done button shoud be enabled")
     }
     
     //reset the language pair to it's original state
@@ -166,7 +211,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
        
         var result: String = "<Translation Error>"
         
-               //set up web session
+        //set up web session with completion handler
         URLSession.shared.dataTask(with: url!, completionHandler: { data, response, error in
             
             if let httpResponse = response as? HTTPURLResponse{
@@ -198,12 +243,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         
         //indicator needs to be displayed on main thread
         DispatchQueue.main.async {
-            self.view.addSubview(self.loadingIndicator)
-            self.loadingIndicator.center = self.view.center;
-            self.loadingIndicator.hidesWhenStopped = true
-            self.loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-            self.loadingIndicator.startAnimating()
-            print("Should be animating indicator")
+            EZLoadingActivity.show("Translating...", disableUI: true)
         }
 
         //gets the translation and updates the view
@@ -211,12 +251,18 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
            
             //ui needs to be updated on main thread i.e inidcator and text views
             DispatchQueue.main.async {
-                self.loadingIndicator.stopAnimating()
-
-                self.translatedText.text = text
-                self.translatedText.textColor = UIColor.black
+                //self.loadingIndicator.stopAnimating()
+                if(!text.isEmpty || text == "<Translation Error>"){
+                    EZLoadingActivity.hide(true, animated: true)
+                    self.translatedText.text = text
+                    self.translatedText.textColor = UIColor.black
+                }else{
+                    EZLoadingActivity.hide(false, animated: true)
+                }
             }
         })
+        
+        //reset variables to allow next translation
         reset()
     }
     

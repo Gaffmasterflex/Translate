@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A86B64991DC8D650001BAF51 /* temp_storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B64981DC8D650001BAF51 /* temp_storyboard.swift */; };
+		A881B0721DCB6AB800D9D347 /* EZLoadingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A881B0711DCB6AB800D9D347 /* EZLoadingActivity.swift */; };
 		A8A5BAB61DC8C25800595892 /* language-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = A8A5BAB51DC8C25800595892 /* language-codes.json */; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
 		FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		A86B64981DC8D650001BAF51 /* temp_storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = temp_storyboard.swift; sourceTree = "<group>"; };
+		A881B0711DCB6AB800D9D347 /* EZLoadingActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZLoadingActivity.swift; path = ../EZLoadingActivity.swift; sourceTree = "<group>"; };
 		A8A5BAB51DC8C25800595892 /* language-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "language-codes.json"; path = "Translate/language-codes.json"; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		FFD2F9B51BD1101A00F54057 /* Translate */ = {
 			isa = PBXGroup;
 			children = (
+				A881B0711DCB6AB800D9D347 /* EZLoadingActivity.swift */,
 				FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */,
 				FFD2F9B81BD1101A00F54057 /* ViewController.swift */,
 				FFD2F9BA1BD1101A00F54057 /* Main.storyboard */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A881B0721DCB6AB800D9D347 /* EZLoadingActivity.swift in Sources */,
 				FFD2F9B91BD1101A00F54057 /* ViewController.swift in Sources */,
 				FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */,
 				A86B64991DC8D650001BAF51 /* temp_storyboard.swift in Sources */,
