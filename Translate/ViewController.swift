@@ -97,20 +97,20 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     
     func updateSourceLanguageLabel(language: String){
         let sourceStr : NSString = "Source Language: " + language as NSString
-        
+        let range = sourceStr.replacingOccurrences(of: language, with: "").characters.count
         let sourceLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: sourceStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
         
-        sourceLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: 22, length: pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage].characters.count))
+        sourceLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: range, length: pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage].characters.count))
         self.sourceLanguageLabel.attributedText = sourceLanguage
     }
     
     func updateDestinationLanguageLabel(language: String){
         //set up dest language label
         let destStr : NSString = "Destination Language: " + language as NSString
-        
+        let range = destStr.replacingOccurrences(of: language, with: "").characters.count
         let destinationLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: destStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
         
-        destinationLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: 22, length: pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage].characters.count))
+        destinationLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: range, length: pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage].characters.count))
         self.destinationLanguageLabel.attributedText = destinationLanguage
     }
     
