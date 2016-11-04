@@ -44,6 +44,13 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     let textToTranslatePlaceholder = "Text to Translate....."
     let translatedTextPlaceHolder = "Translated Text....."
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "Translator"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // maybe use an array of titles and incrementi index here to change titles
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +102,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
 
     }
     
+    //updates source language when a language is picked
     func updateSourceLanguageLabel(language: String){
         let sourceStr : NSString = "Source Language: " + language as NSString
         let range = sourceStr.replacingOccurrences(of: language, with: "").characters.count
@@ -104,6 +112,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         self.sourceLanguageLabel.attributedText = sourceLanguage
     }
     
+    //updates destination language when a new language is picked
     func updateDestinationLanguageLabel(language: String){
         //set up dest language label
         let destStr : NSString = "Destination Language: " + language as NSString
@@ -142,6 +151,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         }
     }
     
+    //sets up the pickerview
     func setUpPickerView(){
         self.languagePicker.delegate = self
         self.languagePicker.dataSource = self
