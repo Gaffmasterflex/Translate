@@ -48,10 +48,6 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         navigationItem.title = "Translator"
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // maybe use an array of titles and incrementi index here to change titles
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPickerView()
@@ -59,6 +55,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         setDefaultSourceLanguage()
         setUpLanguagePairLabels()
         print("The language code should be set to default of device \(languageCode)")
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: Bundle.main.path(forResource: "France_BG", ofType: "jpg")!)
+        self.view.insertSubview(backgroundImage, at: 0)
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,11 +88,14 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
             if(value == strippedSourceLanugageCode){
                 
                 //set up source language label
-                let sourceStr : NSString = "Source Language: " + key as NSString
+                let sourceStr : NSString = "From " + key as NSString
                 
-                let sourceLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: sourceStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
+            
+                let range = sourceStr.replacingOccurrences(of: key, with: "").characters.count
                 
-                sourceLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: 17, length: key.characters.count))
+                let sourceLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: sourceStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu-Bold", size: 17.0)!])
+                
+                sourceLanguage.addAttribute(NSForegroundColorAttributeName, value: pickerSelectorDoneButton.backgroundColor! as UIColor, range: NSRange(location: range, length: key.characters.count))
                 
                 self.sourceLanguageLabel.attributedText = sourceLanguage
                 break
@@ -104,25 +106,32 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     
     //updates source language when a language is picked
     func updateSourceLanguageLabel(language: String){
-        let sourceStr : NSString = "Source Language: " + language as NSString
+        let sourceStr : NSString = "From " + language as NSString
         let range = sourceStr.replacingOccurrences(of: language, with: "").characters.count
-        let sourceLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: sourceStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
+        let sourceLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: sourceStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu-Bold", size: 17.0)!])
         
-        sourceLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: range, length: pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage].characters.count))
+        sourceLanguage.addAttribute(NSForegroundColorAttributeName, value: pickerSelectorDoneButton.backgroundColor! as UIColor, range: NSRange(location: range, length: pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage].characters.count))
         self.sourceLanguageLabel.attributedText = sourceLanguage
     }
     
     //updates destination language when a new language is picked
     func updateDestinationLanguageLabel(language: String){
         //set up dest language label
-        let destStr : NSString = "Destination Language: " + language as NSString
+        let destStr : NSString = "To " + language as NSString
         let range = destStr.replacingOccurrences(of: language, with: "").characters.count
-        let destinationLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: destStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu", size: 17.0)!])
+        let destinationLanguage: NSMutableAttributedString  = NSMutableAttributedString(string: destStr as String,attributes: [NSFontAttributeName: UIFont(name: "Ubuntu-Bold", size: 17.0)!])
         
-        destinationLanguage.addAttribute(NSForegroundColorAttributeName, value: UIColor.cyan, range: NSRange(location: range, length: pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage].characters.count))
+        destinationLanguage.addAttribute(NSForegroundColorAttributeName, value: pickerSelectorDoneButton.backgroundColor! as UIColor, range: NSRange(location: range, length: pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage].characters.count))
         self.destinationLanguageLabel.attributedText = destinationLanguage
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        
+        let strTitle = pickerLanguages[component][row]
+        let attString = NSAttributedString(string: strTitle, attributes: [NSFontAttributeName: UIFont(name: "Ubuntu-Bold", size: 17.0)!,NSForegroundColorAttributeName : UIColor.white])
+        
+        return attString
+    }
     //set up the text views and delegates
     func setUpTextViews(){
         self.textToTranslate.delegate = self

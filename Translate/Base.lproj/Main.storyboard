@@ -15,6 +15,9 @@
         <array key="Ubuntu-C.ttf">
             <string>UbuntuCondensed-Regular</string>
         </array>
+        <array key="Ubuntu-R.ttf">
+            <string>Ubuntu</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Home-->
@@ -29,25 +32,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWV-Oi-8rF">
-                                <rect key="frame" x="166" y="310" width="42" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWV-Oi-8rF">
+                                <rect key="frame" x="166" y="310" width="42" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOo-Dn-XzP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOo-Dn-XzP">
                                 <rect key="frame" x="46" y="508" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Translator"/>
                                 <connections>
                                     <action selector="onTranslatorPressed:" destination="vrO-nF-1HV" eventType="touchUpInside" id="YOx-I5-0ID"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goToTranslator" id="eBT-82-wjI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ8-s8-aF8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ8-s8-aF8">
                                 <rect key="frame" x="268" y="508" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Phrases"/>
                                 <connections>
                                     <action selector="onPhrasesPressed:" destination="vrO-nF-1HV" eventType="touchUpInside" id="ZHL-Un-CDq"/>
@@ -56,6 +56,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="aWV-Oi-8rF" secondAttribute="trailing" constant="151" id="7QR-t7-q1F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CZ8-s8-aF8" secondAttribute="trailing" constant="35" id="7Si-uW-la7"/>
+                            <constraint firstItem="CZ8-s8-aF8" firstAttribute="leading" secondItem="WOo-Dn-XzP" secondAttribute="trailing" constant="153" id="A1J-fe-t2c"/>
+                            <constraint firstItem="WOo-Dn-XzP" firstAttribute="top" secondItem="GSl-Sd-xhd" secondAttribute="bottom" constant="444" id="H0Y-n2-lXi"/>
+                            <constraint firstItem="yEP-A9-7De" firstAttribute="top" secondItem="CZ8-s8-aF8" secondAttribute="bottom" constant="129" id="N5Q-57-JtB"/>
+                            <constraint firstItem="aWV-Oi-8rF" firstAttribute="centerX" secondItem="QkI-Pt-a2h" secondAttribute="centerX" id="TWm-7p-9kq"/>
+                            <constraint firstItem="aWV-Oi-8rF" firstAttribute="centerY" secondItem="QkI-Pt-a2h" secondAttribute="centerY" constant="2.5" id="ZQb-ge-iQF"/>
+                            <constraint firstItem="CZ8-s8-aF8" firstAttribute="top" secondItem="GSl-Sd-xhd" secondAttribute="bottom" constant="444" id="bOH-C4-yvC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WOo-Dn-XzP" secondAttribute="trailing" constant="244" id="eC8-w8-sTX"/>
+                            <constraint firstItem="WOo-Dn-XzP" firstAttribute="leading" secondItem="QkI-Pt-a2h" secondAttribute="leadingMargin" constant="30" id="eYz-aR-ErC"/>
+                            <constraint firstItem="WOo-Dn-XzP" firstAttribute="top" secondItem="aWV-Oi-8rF" secondAttribute="bottom" constant="146" id="he6-Oa-gUy"/>
+                            <constraint firstItem="aWV-Oi-8rF" firstAttribute="leading" secondItem="QkI-Pt-a2h" secondAttribute="leadingMargin" constant="150" id="l8b-Eq-ckc"/>
+                            <constraint firstItem="aWV-Oi-8rF" firstAttribute="top" secondItem="GSl-Sd-xhd" secondAttribute="bottom" constant="246" id="wz9-mK-9ed"/>
+                            <constraint firstItem="yEP-A9-7De" firstAttribute="top" secondItem="aWV-Oi-8rF" secondAttribute="bottom" constant="305" id="xFI-gX-iDX"/>
+                            <constraint firstItem="CZ8-s8-aF8" firstAttribute="top" secondItem="aWV-Oi-8rF" secondAttribute="bottom" constant="146" id="y2o-Hy-ymd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8JI-SX-81O"/>
                     <connections>
@@ -65,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20W-QR-u90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-73" y="185"/>
+            <point key="canvasLocation" x="-74.400000000000006" y="184.85757121439281"/>
         </scene>
         <!--Translator-->
         <scene sceneID="tne-QT-ifu">
@@ -79,115 +96,121 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;Translated Text&gt;" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-KV-DTJ">
-                                <rect key="frame" x="16" y="324" width="340" height="118"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ix0-kJ-hdM">
-                                <rect key="frame" x="27" y="479" width="320" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="dJK-lW-9Eo"/>
-                                </constraints>
-                            </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-A3-XzL">
-                                <rect key="frame" x="216" y="617" width="124" height="30"/>
+                                <rect key="frame" x="212" y="617" width="132" height="30"/>
                                 <color key="backgroundColor" red="0.22446044498305578" green="0.82547644389237407" blue="0.61614998197971382" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination Language: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kq-Fz-wCn">
-                                <rect key="frame" x="16" y="280" width="187" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kq-Fz-wCn">
+                                <rect key="frame" x="31" y="280" width="44" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7Ed-XX-JTU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tk9-7M-DEK">
-                                <rect key="frame" x="0.0" y="637" width="160" height="30"/>
-                                <color key="backgroundColor" red="0.22446044498305578" green="0.82547644389237407" blue="0.61614998197971382" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="31" y="572" width="143" height="30"/>
+                                <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="Phm-WE-DNd"/>
+                                    <constraint firstAttribute="width" constant="143" id="Phm-WE-DNd"/>
                                     <constraint firstAttribute="height" constant="30" id="h1t-It-8nN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
-                                <state key="normal" title="Translate"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                                <state key="normal" title="Translate">
+                                    <color key="titleColor" cyan="1" magenta="0.14999999999999999" yellow="0.0" black="2.8059217584086582e-05" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="translate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N4O-5e-QcF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UT-fy-L2r">
-                                <rect key="frame" x="216" y="637" width="159" height="30"/>
-                                <color key="backgroundColor" red="0.82547644389237407" green="0.30471378242444475" blue="0.24599978896486221" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="197" y="572" width="143" height="30"/>
+                                <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="159" id="xsm-N7-rGd"/>
+                                    <constraint firstAttribute="width" constant="143" id="xsm-N7-rGd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
-                                <state key="normal" title="Choose Language"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                                <state key="normal" title="Choose Language">
+                                    <color key="titleColor" cyan="1" magenta="0.14999999999999999" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onChooseLanguagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHN-yc-UQM"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;Text to Translate&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dii-Vg-90N">
-                                <rect key="frame" x="17" y="133" width="340" height="106"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" text="&lt;Text to Translate&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dii-Vg-90N">
+                                <rect key="frame" x="31" y="162" width="313" height="100"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="1EO-z0-CSk"/>
+                                    <constraint firstAttribute="height" constant="100" id="1EO-z0-CSk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YS-P1-DhZ">
-                                <rect key="frame" x="107" y="577" width="160" height="32"/>
-                                <color key="backgroundColor" red="0.22446044498305578" green="0.82547644389237407" blue="0.61614998197971382" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
-                                <state key="normal" title="Done"/>
+                                <rect key="frame" x="31" y="572" width="313" height="30"/>
+                                <color key="backgroundColor" cyan="1" magenta="0.14999999999999999" yellow="0.0" black="0.0023306377697736025" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="2.8059217584086582e-05" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onPickerSelectorDonePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ae-l7-bEN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source Language: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6P-E8-YfL">
-                                <rect key="frame" x="17" y="86" width="187" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6P-E8-YfL">
+                                <rect key="frame" x="31" y="134" width="44" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="9mp-pb-s8K"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" text="&lt;Translated Text&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yS0-ye-l51">
+                                <rect key="frame" x="31" y="308" width="313" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ix0-kJ-hdM">
+                                <rect key="frame" x="35" y="457" width="305" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="dJK-lW-9Eo"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.45611249919353147" green="0.51894144576275725" blue="0.59588711143164108" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cyan="0.46999999999999997" magenta="0.29999999999999999" yellow="0.16413396596908569" black="0.0076561984606087208" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dii-Vg-90N" firstAttribute="top" secondItem="d6P-E8-YfL" secondAttribute="bottom" constant="27" id="2MG-Z2-KOW"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="centerX" secondItem="1YS-P1-DhZ" secondAttribute="centerX" constant="-0.5" id="0gW-b2-Aum"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="top" secondItem="d6P-E8-YfL" secondAttribute="bottom" constant="8" id="2MG-Z2-KOW"/>
                             <constraint firstItem="4UT-fy-L2r" firstAttribute="height" secondItem="Tk9-7M-DEK" secondAttribute="height" id="4D8-Lv-EIj"/>
-                            <constraint firstItem="d6P-E8-YfL" firstAttribute="trailing" secondItem="4kq-Fz-wCn" secondAttribute="trailing" constant="1" id="4Me-zn-EQw"/>
-                            <constraint firstAttribute="bottom" secondItem="Tk9-7M-DEK" secondAttribute="bottom" id="5BT-Ci-bff"/>
-                            <constraint firstItem="4kq-Fz-wCn" firstAttribute="leading" secondItem="LaV-KV-DTJ" secondAttribute="leading" id="9OE-TU-bJe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1YS-P1-DhZ" secondAttribute="trailing" constant="92" id="AbW-gt-grR"/>
-                            <constraint firstItem="d6P-E8-YfL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="CBd-d8-L1m"/>
-                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="top" secondItem="bEQ-A3-XzL" secondAttribute="top" constant="20" id="COf-vO-fXK"/>
+                            <constraint firstItem="d6P-E8-YfL" firstAttribute="trailing" secondItem="4kq-Fz-wCn" secondAttribute="trailing" id="4Me-zn-EQw"/>
+                            <constraint firstAttribute="bottom" secondItem="Tk9-7M-DEK" secondAttribute="bottom" constant="65" id="5BT-Ci-bff"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1YS-P1-DhZ" secondAttribute="trailing" constant="15" id="AbW-gt-grR"/>
+                            <constraint firstItem="d6P-E8-YfL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="CBd-d8-L1m"/>
+                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="top" secondItem="bEQ-A3-XzL" secondAttribute="top" constant="-45" id="COf-vO-fXK"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="leading" secondItem="d6P-E8-YfL" secondAttribute="leading" id="DXf-E9-iUZ"/>
-                            <constraint firstItem="ix0-kJ-hdM" firstAttribute="top" secondItem="LaV-KV-DTJ" secondAttribute="bottom" constant="37" id="I1V-l3-lqu"/>
                             <constraint firstItem="dii-Vg-90N" firstAttribute="centerX" secondItem="ix0-kJ-hdM" secondAttribute="centerX" id="MF7-kq-j4R"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1YS-P1-DhZ" secondAttribute="bottom" constant="58" id="Map-dQ-5jO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LaV-KV-DTJ" secondAttribute="trailing" constant="3" id="NTB-pj-XGE"/>
-                            <constraint firstItem="4kq-Fz-wCn" firstAttribute="top" secondItem="dii-Vg-90N" secondAttribute="bottom" constant="41" id="Otb-0s-S16"/>
-                            <constraint firstItem="d6P-E8-YfL" firstAttribute="leading" secondItem="4kq-Fz-wCn" secondAttribute="leading" constant="1" id="VYi-HL-CHJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1YS-P1-DhZ" secondAttribute="bottom" constant="65" id="Map-dQ-5jO"/>
+                            <constraint firstItem="yS0-ye-l51" firstAttribute="top" secondItem="4kq-Fz-wCn" secondAttribute="bottom" constant="8" id="OfX-Cy-u5T"/>
+                            <constraint firstItem="4kq-Fz-wCn" firstAttribute="top" secondItem="dii-Vg-90N" secondAttribute="bottom" constant="18" id="Otb-0s-S16"/>
+                            <constraint firstItem="ix0-kJ-hdM" firstAttribute="top" secondItem="yS0-ye-l51" secondAttribute="bottom" constant="49" id="V2g-QS-3ed"/>
+                            <constraint firstItem="d6P-E8-YfL" firstAttribute="leading" secondItem="4kq-Fz-wCn" secondAttribute="leading" id="VYi-HL-CHJ"/>
                             <constraint firstAttribute="bottom" secondItem="bEQ-A3-XzL" secondAttribute="bottom" constant="20" symbolic="YES" id="bT0-6P-bJW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bEQ-A3-XzL" secondAttribute="trailing" constant="19" id="bcy-iV-PSr"/>
-                            <constraint firstAttribute="trailing" secondItem="4UT-fy-L2r" secondAttribute="trailing" id="buH-3k-MQJ"/>
-                            <constraint firstItem="ix0-kJ-hdM" firstAttribute="centerX" secondItem="LaV-KV-DTJ" secondAttribute="centerX" constant="1" id="etI-S9-hAE"/>
-                            <constraint firstItem="d6P-E8-YfL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="fnm-s2-rgX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bEQ-A3-XzL" secondAttribute="trailing" constant="15" id="bcy-iV-PSr"/>
+                            <constraint firstAttribute="trailing" secondItem="4UT-fy-L2r" secondAttribute="trailing" constant="35" id="buH-3k-MQJ"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="trailing" secondItem="yS0-ye-l51" secondAttribute="trailing" id="bzp-9q-N9l"/>
+                            <constraint firstItem="dii-Vg-90N" firstAttribute="leading" secondItem="yS0-ye-l51" secondAttribute="leading" id="dnI-qj-TBi"/>
+                            <constraint firstItem="d6P-E8-YfL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="fnm-s2-rgX"/>
                             <constraint firstItem="4UT-fy-L2r" firstAttribute="baseline" secondItem="Tk9-7M-DEK" secondAttribute="baseline" id="gry-63-e84"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="LaV-KV-DTJ" secondAttribute="leading" id="lAN-SG-jqv"/>
-                            <constraint firstItem="1YS-P1-DhZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="91" id="qPf-eF-Piv"/>
-                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="rrB-ui-lkd"/>
-                            <constraint firstItem="4UT-fy-L2r" firstAttribute="top" secondItem="1YS-P1-DhZ" secondAttribute="bottom" constant="28" id="sY2-sk-4R3"/>
-                            <constraint firstItem="LaV-KV-DTJ" firstAttribute="top" secondItem="4kq-Fz-wCn" secondAttribute="bottom" constant="24" id="swZ-Pn-Fr1"/>
-                            <constraint firstItem="1YS-P1-DhZ" firstAttribute="top" secondItem="ix0-kJ-hdM" secondAttribute="bottom" constant="32" id="tsL-A0-Wbo"/>
-                            <constraint firstItem="bEQ-A3-XzL" firstAttribute="leading" secondItem="Tk9-7M-DEK" secondAttribute="trailing" constant="56" id="ukY-7D-7pU"/>
-                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="top" secondItem="1YS-P1-DhZ" secondAttribute="bottom" constant="28" id="x4e-Fe-ues"/>
+                            <constraint firstItem="1YS-P1-DhZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="qPf-eF-Piv"/>
+                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="rrB-ui-lkd"/>
+                            <constraint firstItem="4UT-fy-L2r" firstAttribute="top" secondItem="1YS-P1-DhZ" secondAttribute="bottom" constant="-30" id="sY2-sk-4R3"/>
+                            <constraint firstItem="1YS-P1-DhZ" firstAttribute="top" secondItem="ix0-kJ-hdM" secondAttribute="bottom" constant="49" id="tsL-A0-Wbo"/>
+                            <constraint firstItem="yS0-ye-l51" firstAttribute="height" secondItem="dii-Vg-90N" secondAttribute="height" id="udE-wh-UlP"/>
+                            <constraint firstItem="bEQ-A3-XzL" firstAttribute="leading" secondItem="Tk9-7M-DEK" secondAttribute="trailing" constant="38" id="ukY-7D-7pU"/>
+                            <constraint firstItem="Tk9-7M-DEK" firstAttribute="top" secondItem="1YS-P1-DhZ" secondAttribute="bottom" constant="-30" id="x4e-Fe-ues"/>
                         </constraints>
                     </view>
                     <connections>
@@ -198,7 +221,7 @@
                         <outlet property="sourceLanguageLabel" destination="d6P-E8-YfL" id="6yM-yo-krn"/>
                         <outlet property="textToTranslate" destination="dii-Vg-90N" id="KzX-Xq-gkN"/>
                         <outlet property="translateButton" destination="Tk9-7M-DEK" id="wZr-wC-vF8"/>
-                        <outlet property="translatedText" destination="LaV-KV-DTJ" id="mVU-ud-gd0"/>
+                        <outlet property="translatedText" destination="yS0-ye-l51" id="gcC-GX-V1t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
