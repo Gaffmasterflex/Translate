@@ -19,7 +19,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     
     @IBOutlet weak var sourceLanguageLabel: UILabel!
     @IBOutlet weak var destinationLanguageLabel: UILabel!
-    
+    var backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+
+    let backgroundImages = ["English" : "England_BG", "French" : "France_BG", "Gaelic" : "Ireland_BG", "Turkish" : "Turkey_BG"]
     //ui indicator
     let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     //toast label for when user tries to translate empty message
@@ -55,8 +57,14 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         setDefaultSourceLanguage()
         setUpLanguagePairLabels()
         print("The language code should be set to default of device \(languageCode)")
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: Bundle.main.path(forResource: "France_BG", ofType: "jpg")!)
+       /* let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: Bundle.main.path(forResource: backgroundImages[pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage]], ofType: "jpg")!)
+        self.view.insertSubview(backgroundImage, at: 0)*/
+        setBackgroundImage()
+    }
+    
+    func setBackgroundImage(){
+        backgroundImage.image = UIImage(named: Bundle.main.path(forResource: backgroundImages[pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage]], ofType: "jpg")!)
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
@@ -196,6 +204,9 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         //update labels
         updateSourceLanguageLabel(language: pickerLanguages[rowOfSourceLanguageSelection][indexOfSourceLanguage])
         updateDestinationLanguageLabel(language: pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage])
+        
+        //update backgroundImage
+        setBackgroundImage()
     }
     
     

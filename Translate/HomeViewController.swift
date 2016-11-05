@@ -12,7 +12,8 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var phrasesButton: UIButton!
     @IBOutlet weak var translatorButton: UIButton!
-    
+    var backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+
     //several background images (different background image may be displayed on launch depending on random number index)
     let imageExtension = "jpg"
     let backgroundImages = ["Home_Page_1","Home_Page_2","Home_Page_3","Home_Page_4","Home_Page_5","Home_Page_6"]
@@ -28,7 +29,6 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationItem.title = "Home"
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: Bundle.main.path(forResource: backgroundImages[Int(getRandomPicture())], ofType: imageExtension)!)
         self.view.insertSubview(backgroundImage, at: 0)
     }
