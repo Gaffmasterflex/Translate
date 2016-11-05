@@ -35,6 +35,11 @@
 		E1F6ECCC1DCE35FD0014BBA5 /* Turkey_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECC81DCE35FD0014BBA5 /* Turkey_BG.jpg */; };
 		E1F6ECCF1DCE361B0014BBA5 /* Splash_Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECCE1DCE361B0014BBA5 /* Splash_Screen.jpg */; };
 		E1F6ECD51DCE3F770014BBA5 /* PhraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ECD41DCE3F770014BBA5 /* PhraseViewController.swift */; };
+		E1F6ECDB1DCE475A0014BBA5 /* PhraseButton_England.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECD61DCE475A0014BBA5 /* PhraseButton_England.jpg */; };
+		E1F6ECDC1DCE475A0014BBA5 /* PhraseButton_France.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECD71DCE475A0014BBA5 /* PhraseButton_France.jpg */; };
+		E1F6ECDD1DCE475A0014BBA5 /* PhraseButton_Ireland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECD81DCE475A0014BBA5 /* PhraseButton_Ireland.jpg */; };
+		E1F6ECDE1DCE475A0014BBA5 /* PhraseButton_Turkey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECD91DCE475A0014BBA5 /* PhraseButton_Turkey.jpg */; };
+		E1F6ECE11DCE47C30014BBA5 /* PhraseButtonsDarker_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECE01DCE47C30014BBA5 /* PhraseButtonsDarker_BG.jpg */; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
 		FFD2F9B91BD1101A00F54057 /* TranslatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* TranslatorViewController.swift */; };
 		FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BA1BD1101A00F54057 /* Main.storyboard */; };
@@ -71,6 +76,11 @@
 		E1F6ECC81DCE35FD0014BBA5 /* Turkey_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Turkey_BG.jpg; sourceTree = "<group>"; };
 		E1F6ECCE1DCE361B0014BBA5 /* Splash_Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash_Screen.jpg; sourceTree = "<group>"; };
 		E1F6ECD41DCE3F770014BBA5 /* PhraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhraseViewController.swift; sourceTree = "<group>"; };
+		E1F6ECD61DCE475A0014BBA5 /* PhraseButton_England.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhraseButton_England.jpg; sourceTree = "<group>"; };
+		E1F6ECD71DCE475A0014BBA5 /* PhraseButton_France.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhraseButton_France.jpg; sourceTree = "<group>"; };
+		E1F6ECD81DCE475A0014BBA5 /* PhraseButton_Ireland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhraseButton_Ireland.jpg; sourceTree = "<group>"; };
+		E1F6ECD91DCE475A0014BBA5 /* PhraseButton_Turkey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhraseButton_Turkey.jpg; sourceTree = "<group>"; };
+		E1F6ECE01DCE47C30014BBA5 /* PhraseButtonsDarker_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhraseButtonsDarker_BG.jpg; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD2F9B81BD1101A00F54057 /* TranslatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +167,11 @@
 		E1F6ECB21DCDFFCB0014BBA5 /* phrases */ = {
 			isa = PBXGroup;
 			children = (
+				E1F6ECE01DCE47C30014BBA5 /* PhraseButtonsDarker_BG.jpg */,
+				E1F6ECD61DCE475A0014BBA5 /* PhraseButton_England.jpg */,
+				E1F6ECD71DCE475A0014BBA5 /* PhraseButton_France.jpg */,
+				E1F6ECD81DCE475A0014BBA5 /* PhraseButton_Ireland.jpg */,
+				E1F6ECD91DCE475A0014BBA5 /* PhraseButton_Turkey.jpg */,
 			);
 			name = phrases;
 			sourceTree = "<group>";
@@ -270,9 +285,12 @@
 				A881B0801DCB6F3D00D9D347 /* Ubuntu-BI.ttf in Resources */,
 				A881B0841DCB6F3D00D9D347 /* Ubuntu-M.ttf in Resources */,
 				E1F6ECCB1DCE35FD0014BBA5 /* Ireland_BG.jpg in Resources */,
+				E1F6ECDE1DCE475A0014BBA5 /* PhraseButton_Turkey.jpg in Resources */,
+				E1F6ECE11DCE47C30014BBA5 /* PhraseButtonsDarker_BG.jpg in Resources */,
 				E1F6ECC31DCE35CB0014BBA5 /* Home_Page_4.jpg in Resources */,
 				E1F6ECCA1DCE35FD0014BBA5 /* France_BG.jpg in Resources */,
 				A881B0851DCB6F3D00D9D347 /* Ubuntu-MI.ttf in Resources */,
+				E1F6ECDD1DCE475A0014BBA5 /* PhraseButton_Ireland.jpg in Resources */,
 				E1F6ECCC1DCE35FD0014BBA5 /* Turkey_BG.jpg in Resources */,
 				FFD2F9C11BD1101A00F54057 /* LaunchScreen.storyboard in Resources */,
 				A881B07F1DCB6F3D00D9D347 /* Ubuntu-B.ttf in Resources */,
@@ -289,10 +307,12 @@
 				FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */,
 				E1F6ECC91DCE35FD0014BBA5 /* England_BG.jpg in Resources */,
 				E1F6ECC01DCE35CB0014BBA5 /* Home_Page_6.jpg in Resources */,
+				E1F6ECDB1DCE475A0014BBA5 /* PhraseButton_England.jpg in Resources */,
 				A881B0811DCB6F3D00D9D347 /* Ubuntu-C.ttf in Resources */,
 				E1F6ECBF1DCE35CB0014BBA5 /* Home_Page_2.jpg in Resources */,
 				E1F6ECC21DCE35CB0014BBA5 /* Home_Page_3.jpg in Resources */,
 				A881B0891DCB6F3D00D9D347 /* UbuntuMono-BI.ttf in Resources */,
+				E1F6ECDC1DCE475A0014BBA5 /* PhraseButton_France.jpg in Resources */,
 				E1F6ECC11DCE35CB0014BBA5 /* Home_Page_1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
