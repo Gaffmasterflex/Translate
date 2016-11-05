@@ -23,7 +23,6 @@
 		A881B08A1DCB6F3D00D9D347 /* UbuntuMono-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A881B07E1DCB6F3D00D9D347 /* UbuntuMono-R.ttf */; };
 		A8A5BAB61DC8C25800595892 /* language-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = A8A5BAB51DC8C25800595892 /* language-codes.json */; };
 		E1F6ECAC1DCCBF620014BBA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ECAB1DCCBF620014BBA5 /* HomeViewController.swift */; };
-		E1F6ECAE1DCCC7B40014BBA5 /* PhraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ECAD1DCCC7B40014BBA5 /* PhraseViewController.swift */; };
 		E1F6ECBF1DCE35CB0014BBA5 /* Home_Page_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECB91DCE35CB0014BBA5 /* Home_Page_2.jpg */; };
 		E1F6ECC01DCE35CB0014BBA5 /* Home_Page_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECBA1DCE35CB0014BBA5 /* Home_Page_6.jpg */; };
 		E1F6ECC11DCE35CB0014BBA5 /* Home_Page_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECBB1DCE35CB0014BBA5 /* Home_Page_1.jpg */; };
@@ -35,6 +34,7 @@
 		E1F6ECCB1DCE35FD0014BBA5 /* Ireland_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECC71DCE35FD0014BBA5 /* Ireland_BG.jpg */; };
 		E1F6ECCC1DCE35FD0014BBA5 /* Turkey_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECC81DCE35FD0014BBA5 /* Turkey_BG.jpg */; };
 		E1F6ECCF1DCE361B0014BBA5 /* Splash_Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ECCE1DCE361B0014BBA5 /* Splash_Screen.jpg */; };
+		E1F6ECD51DCE3F770014BBA5 /* PhraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ECD41DCE3F770014BBA5 /* PhraseViewController.swift */; };
 		FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */; };
 		FFD2F9B91BD1101A00F54057 /* TranslatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2F9B81BD1101A00F54057 /* TranslatorViewController.swift */; };
 		FFD2F9BC1BD1101A00F54057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD2F9BA1BD1101A00F54057 /* Main.storyboard */; };
@@ -59,7 +59,6 @@
 		A881B07E1DCB6F3D00D9D347 /* UbuntuMono-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-R.ttf"; sourceTree = "<group>"; };
 		A8A5BAB51DC8C25800595892 /* language-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "language-codes.json"; path = "Translate/language-codes.json"; sourceTree = "<group>"; };
 		E1F6ECAB1DCCBF620014BBA5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E1F6ECAD1DCCC7B40014BBA5 /* PhraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhraseViewController.swift; sourceTree = "<group>"; };
 		E1F6ECB91DCE35CB0014BBA5 /* Home_Page_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Page_2.jpg; sourceTree = "<group>"; };
 		E1F6ECBA1DCE35CB0014BBA5 /* Home_Page_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Page_6.jpg; sourceTree = "<group>"; };
 		E1F6ECBB1DCE35CB0014BBA5 /* Home_Page_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Page_1.jpg; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		E1F6ECC71DCE35FD0014BBA5 /* Ireland_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ireland_BG.jpg; sourceTree = "<group>"; };
 		E1F6ECC81DCE35FD0014BBA5 /* Turkey_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Turkey_BG.jpg; sourceTree = "<group>"; };
 		E1F6ECCE1DCE361B0014BBA5 /* Splash_Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash_Screen.jpg; sourceTree = "<group>"; };
+		E1F6ECD41DCE3F770014BBA5 /* PhraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhraseViewController.swift; sourceTree = "<group>"; };
 		FFD2F9B31BD1101A00F54057 /* Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD2F9B61BD1101A00F54057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD2F9B81BD1101A00F54057 /* TranslatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				FFD2F9BF1BD1101A00F54057 /* LaunchScreen.storyboard */,
 				FFD2F9C21BD1101A00F54057 /* Info.plist */,
 				E1F6ECAB1DCCBF620014BBA5 /* HomeViewController.swift */,
-				E1F6ECAD1DCCC7B40014BBA5 /* PhraseViewController.swift */,
+				E1F6ECD41DCE3F770014BBA5 /* PhraseViewController.swift */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				FFD2F9B71BD1101A00F54057 /* AppDelegate.swift in Sources */,
 				A86B64991DC8D650001BAF51 /* temp_storyboard.swift in Sources */,
 				E1F6ECAC1DCCBF620014BBA5 /* HomeViewController.swift in Sources */,
-				E1F6ECAE1DCCC7B40014BBA5 /* PhraseViewController.swift in Sources */,
+				E1F6ECD51DCE3F770014BBA5 /* PhraseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
