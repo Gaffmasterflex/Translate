@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20W-QR-u90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74.400000000000006" y="184.85757121439281"/>
+            <point key="canvasLocation" x="-65" y="123"/>
         </scene>
         <!--Translator-->
         <scene sceneID="tne-QT-ifu">
@@ -243,7 +243,15 @@
                                 <rect key="frame" x="38" y="222" width="140" height="140"/>
                                 <color key="backgroundColor" red="0.0" green="0.7564239501953125" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="English" backgroundImage="PhraseButton_England.jpg">
+                                    <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNI-J9-aEl">
+                                <rect key="frame" x="197" y="381" width="140" height="140"/>
+                                <color key="backgroundColor" red="0.0" green="0.7564239501953125" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
+                                <state key="normal" title="Turkish" backgroundImage="PhraseButton_Turkey.jpg">
                                     <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
                             </button>
@@ -255,7 +263,7 @@
                                     <constraint firstAttribute="width" constant="140" id="pWF-KH-ylt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="French" backgroundImage="PhraseButton_France.jpg">
                                     <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
                             </button>
@@ -263,15 +271,7 @@
                                 <rect key="frame" x="38" y="381" width="140" height="140"/>
                                 <color key="backgroundColor" red="0.0" green="0.7564239501953125" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNI-J9-aEl">
-                                <rect key="frame" x="197" y="381" width="140" height="140"/>
-                                <color key="backgroundColor" red="0.0" green="0.7564239501953125" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Irish" backgroundImage="PhraseButton_Ireland.jpg">
                                     <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
                             </button>
@@ -318,4 +318,10 @@
             <point key="canvasLocation" x="-954.39999999999998" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PhraseButton_England.jpg" width="667" height="667"/>
+        <image name="PhraseButton_France.jpg" width="667" height="667"/>
+        <image name="PhraseButton_Ireland.jpg" width="667" height="667"/>
+        <image name="PhraseButton_Turkey.jpg" width="667" height="667"/>
+    </resources>
 </document>

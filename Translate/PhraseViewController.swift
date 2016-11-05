@@ -21,6 +21,13 @@ class PhraseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationItem.title = "Basic Phrases"
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: Bundle.main.path(forResource: "PhraseButtonsDarker_BG", ofType: "jpg")!)
+        self.view.insertSubview(backgroundImage, at: 0)
+    }
 
     /*
     // MARK: - Navigation

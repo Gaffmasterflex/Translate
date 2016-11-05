@@ -12,11 +12,13 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var phrasesButton: UIButton!
     @IBOutlet weak var translatorButton: UIButton!
+    
+    //several background images (different background image may be displayed on launch depending on random number index)
     let imageExtension = "jpg"
     let backgroundImages = ["Home_Page_1","Home_Page_2","Home_Page_3","Home_Page_4","Home_Page_5","Home_Page_6"]
     
    @IBAction func onPhrasesPressed(_ sender: UIButton) {
-        //gpushed onto phrases controller
+        //pushed onto phrases controller
     }
     
     @IBAction func onTranslatorPressed(_ sender: UIButton) {
@@ -37,13 +39,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
-        for font in UIFont.familyNames{
-            for familyName in UIFont.fontNames(forFamilyName: font){
-                print("Font Name is : \(familyName)")
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {
