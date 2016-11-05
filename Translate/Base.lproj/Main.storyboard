@@ -246,6 +246,9 @@
                                 <state key="normal" title="English" backgroundImage="PhraseButton_England.jpg">
                                     <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Lv9-Nq-drm" kind="show" id="OH2-Rs-rvZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNI-J9-aEl">
                                 <rect key="frame" x="197" y="381" width="140" height="140"/>
@@ -254,6 +257,9 @@
                                 <state key="normal" title="Turkish" backgroundImage="PhraseButton_Turkey.jpg">
                                     <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eWX-RR-HDN" kind="show" id="a91-jB-Eu0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UH-1L-OPa">
                                 <rect key="frame" x="197" y="222" width="140" height="140"/>
@@ -266,14 +272,20 @@
                                 <state key="normal" title="French" backgroundImage="PhraseButton_France.jpg">
                                     <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="YWf-Gz-fov" kind="show" id="mfw-Ly-vD5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvM-XC-iHU">
                                 <rect key="frame" x="38" y="381" width="140" height="140"/>
                                 <color key="backgroundColor" red="0.0" green="0.7564239501953125" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
-                                <state key="normal" title="Irish" backgroundImage="PhraseButton_Ireland.jpg">
+                                <state key="normal" title="Gaelic" backgroundImage="PhraseButton_Ireland.jpg">
                                     <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="B94-nD-FLL" kind="show" id="Kxq-QC-WgW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -299,12 +311,128 @@
             </objects>
             <point key="canvasLocation" x="1602" y="126"/>
         </scene>
+        <!--English Phrases-->
+        <scene sceneID="Rze-zl-jye">
+            <objects>
+                <viewController title="English Phrases" id="Lv9-Nq-drm" customClass="EnglishPhrasesViewController" customModule="Translate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a6a-lr-WBN"/>
+                        <viewControllerLayoutGuide type="bottom" id="C6Q-80-BdK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mek-c0-Tx2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseButtonsDarker_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hqt-p4-X1u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hqt-p4-X1u" firstAttribute="height" secondItem="Mek-c0-Tx2" secondAttribute="height" id="FtR-wN-RPs"/>
+                            <constraint firstItem="hqt-p4-X1u" firstAttribute="centerY" secondItem="Mek-c0-Tx2" secondAttribute="centerY" id="b95-LS-D5m"/>
+                            <constraint firstItem="hqt-p4-X1u" firstAttribute="width" secondItem="Mek-c0-Tx2" secondAttribute="width" id="cYo-xZ-QRG"/>
+                            <constraint firstItem="hqt-p4-X1u" firstAttribute="leading" secondItem="Mek-c0-Tx2" secondAttribute="leadingMargin" constant="-16" id="fBv-Yl-JzU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAH-ND-Xis" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2413.5999999999999" y="-13.043478260869566"/>
+        </scene>
+        <!--Gaelic Phrases-->
+        <scene sceneID="0RL-Qx-oq1">
+            <objects>
+                <viewController title="Gaelic Phrases" id="B94-nD-FLL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="igx-ox-VFC"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ls-nC-6g3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3IR-Ut-7Mx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseButtonsDarker_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rWN-DS-XGi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rWN-DS-XGi" firstAttribute="width" secondItem="3IR-Ut-7Mx" secondAttribute="width" id="L04-Jn-a8E"/>
+                            <constraint firstItem="rWN-DS-XGi" firstAttribute="centerY" secondItem="3IR-Ut-7Mx" secondAttribute="centerY" id="OrX-Oy-r0v"/>
+                            <constraint firstItem="rWN-DS-XGi" firstAttribute="centerX" secondItem="3IR-Ut-7Mx" secondAttribute="centerX" id="dSE-QZ-CtI"/>
+                            <constraint firstItem="rWN-DS-XGi" firstAttribute="height" secondItem="3IR-Ut-7Mx" secondAttribute="height" id="l0v-dW-3Km"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60h-wC-y7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2413.5999999999999" y="671.51424287856082"/>
+        </scene>
+        <!--Turkish Phrases-->
+        <scene sceneID="t9y-94-L2h">
+            <objects>
+                <viewController title="Turkish Phrases" id="eWX-RR-HDN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PYA-xk-Ui9"/>
+                        <viewControllerLayoutGuide type="bottom" id="7sP-nz-qv7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EXJ-0N-du8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseButtonsDarker_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c3b-Md-ecG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c3b-Md-ecG" firstAttribute="centerX" secondItem="EXJ-0N-du8" secondAttribute="centerX" id="1ZY-LI-Ard"/>
+                            <constraint firstItem="c3b-Md-ecG" firstAttribute="centerY" secondItem="EXJ-0N-du8" secondAttribute="centerY" id="BIT-xq-Hm2"/>
+                            <constraint firstItem="c3b-Md-ecG" firstAttribute="height" secondItem="EXJ-0N-du8" secondAttribute="height" id="Orh-sV-rgK"/>
+                            <constraint firstItem="c3b-Md-ecG" firstAttribute="width" secondItem="EXJ-0N-du8" secondAttribute="width" id="wFs-8s-YDa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FX-5V-Uwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3117.5999999999999" y="671.51424287856082"/>
+        </scene>
+        <!--French Phrases-->
+        <scene sceneID="wf5-Pk-JNs">
+            <objects>
+                <viewController title="French Phrases" id="YWf-Gz-fov" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MrZ-3H-Dhg"/>
+                        <viewControllerLayoutGuide type="bottom" id="A6a-Wv-tdN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gzh-UT-5iS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseButtonsDarker_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1O7-3D-JWB">
+                                <rect key="frame" x="0.0" y="7" width="375" height="660"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1O7-3D-JWB" firstAttribute="centerX" secondItem="gzh-UT-5iS" secondAttribute="centerX" id="AfZ-4G-gVl"/>
+                            <constraint firstItem="1O7-3D-JWB" firstAttribute="top" secondItem="MrZ-3H-Dhg" secondAttribute="bottom" constant="-57" id="Ahn-P9-0jP"/>
+                            <constraint firstItem="A6a-Wv-tdN" firstAttribute="top" secondItem="1O7-3D-JWB" secondAttribute="bottom" id="I6b-HK-07T"/>
+                            <constraint firstItem="1O7-3D-JWB" firstAttribute="leading" secondItem="gzh-UT-5iS" secondAttribute="leadingMargin" constant="-16" id="qo4-Me-OOf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vs-N3-qWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3119.1999999999998" y="-13.043478260869566"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zbp-qb-VNm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9Z-Ht-FN8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OVC-7a-R34">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OVC-7a-R34">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -323,5 +451,6 @@
         <image name="PhraseButton_France.jpg" width="667" height="667"/>
         <image name="PhraseButton_Ireland.jpg" width="667" height="667"/>
         <image name="PhraseButton_Turkey.jpg" width="667" height="667"/>
+        <image name="PhraseButtonsDarker_BG.jpg" width="750" height="1334"/>
     </resources>
 </document>

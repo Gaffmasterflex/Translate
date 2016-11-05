@@ -40,7 +40,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     var rowOfSourceLanguageSelection = 0  //used to access the data array at the user specified index
     var rowOfDestLanguageSelection = 0
     //index of selected language
-    var indexOfSourceLanguage = 0
+    var indexOfSourceLanguage = 3   //start as english 
     var indexOfDestLanguage = 0
     //placeholders for uitext elements
     let textToTranslatePlaceholder = "Text to Translate....."
@@ -57,9 +57,8 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         setDefaultSourceLanguage()
         setUpLanguagePairLabels()
         print("The language code should be set to default of device \(languageCode)")
-       /* let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: Bundle.main.path(forResource: backgroundImages[pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage]], ofType: "jpg")!)
-        self.view.insertSubview(backgroundImage, at: 0)*/
+        languageCode += languageDictonary[pickerLanguages[rowOfDestLanguageSelection][indexOfDestLanguage]]!
+        print("View loaded and language code is : \(languageCode)")
         setBackgroundImage()
     }
     
