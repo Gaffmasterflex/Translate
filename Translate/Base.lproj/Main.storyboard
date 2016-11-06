@@ -12,6 +12,9 @@
         <array key="Ubuntu-B.ttf">
             <string>Ubuntu-Bold</string>
         </array>
+        <array key="Ubuntu-BI.ttf">
+            <string>Ubuntu-BoldItalic</string>
+        </array>
         <array key="Ubuntu-C.ttf">
             <string>UbuntuCondensed-Regular</string>
         </array>
@@ -326,13 +329,155 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseButtonsDarker_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hqt-p4-X1u">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-BL-Aei">
+                                <rect key="frame" x="44" y="221" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jq9-QP-tRL"/>
+                                    <constraint firstAttribute="width" constant="202" id="qoi-4h-ofG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Bonjour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-4r-T55">
+                                <rect key="frame" x="25" y="192" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="4ev-Lx-ZB2"/>
+                                    <constraint firstAttribute="height" constant="21" id="Bin-vI-GDg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mP-xq-khi">
+                                <rect key="frame" x="44" y="298" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1hV-Bv-7gp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Comment tu t'appelle?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYh-Qo-AH9">
+                                <rect key="frame" x="25" y="269" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="p2v-Zk-nsi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6h-kS-Hsv">
+                                <rect key="frame" x="44" y="380" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HZ5-kW-n2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Je m'appelle Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmd-WY-vid">
+                                <rect key="frame" x="25" y="351" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VNm-tj-4vA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the hotel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-iz-6WM">
+                                <rect key="frame" x="44" y="460" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="XaJ-TQ-t2q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Oú est l'hotel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2y-Gv-QvK">
+                                <rect key="frame" x="25" y="431" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0nC-Mb-Waa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes/No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6le-nu-Gch">
+                                <rect key="frame" x="44" y="535" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UM3-i0-oKz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Oui/Non" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmG-xj-3NO">
+                                <rect key="frame" x="25" y="506" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2D5-hR-44d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiL-RP-Ru9">
+                                <rect key="frame" x="44" y="611" width="202" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Combien?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d7-SE-AdC">
+                                <rect key="frame" x="25" y="582" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fvD-KG-L2o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="EmG-xj-3NO" firstAttribute="top" secondItem="IFx-iz-6WM" secondAttribute="bottom" constant="25" id="1at-zx-CSJ"/>
+                            <constraint firstItem="aW8-BL-Aei" firstAttribute="trailing" secondItem="1mP-xq-khi" secondAttribute="trailing" id="2ni-Cf-IfH"/>
+                            <constraint firstItem="1mP-xq-khi" firstAttribute="leading" secondItem="i6h-kS-Hsv" secondAttribute="leading" id="6UL-Rc-Eik"/>
+                            <constraint firstItem="6le-nu-Gch" firstAttribute="trailing" secondItem="TiL-RP-Ru9" secondAttribute="trailing" id="6jp-yE-I2A"/>
+                            <constraint firstItem="0d7-SE-AdC" firstAttribute="top" secondItem="6le-nu-Gch" secondAttribute="bottom" constant="26" id="7v3-j4-opX"/>
+                            <constraint firstItem="9Zw-4r-T55" firstAttribute="top" secondItem="a6a-lr-WBN" secondAttribute="bottom" constant="128" id="9Cm-ad-M38"/>
+                            <constraint firstItem="i6h-kS-Hsv" firstAttribute="leading" secondItem="IFx-iz-6WM" secondAttribute="leading" id="Bbl-WH-P48"/>
+                            <constraint firstItem="oYh-Qo-AH9" firstAttribute="top" secondItem="aW8-BL-Aei" secondAttribute="bottom" constant="27" id="DHR-MD-qUw"/>
+                            <constraint firstItem="EmG-xj-3NO" firstAttribute="leading" secondItem="0d7-SE-AdC" secondAttribute="leading" id="Dkc-Fp-lbh"/>
+                            <constraint firstItem="q2y-Gv-QvK" firstAttribute="trailing" secondItem="EmG-xj-3NO" secondAttribute="trailing" id="EVV-DF-e0c"/>
+                            <constraint firstItem="Cmd-WY-vid" firstAttribute="leading" secondItem="q2y-Gv-QvK" secondAttribute="leading" id="FCr-ne-ezO"/>
                             <constraint firstItem="hqt-p4-X1u" firstAttribute="height" secondItem="Mek-c0-Tx2" secondAttribute="height" id="FtR-wN-RPs"/>
+                            <constraint firstItem="aW8-BL-Aei" firstAttribute="top" secondItem="9Zw-4r-T55" secondAttribute="bottom" constant="8" id="GeT-BS-Dvt"/>
+                            <constraint firstItem="9Zw-4r-T55" firstAttribute="leading" secondItem="Mek-c0-Tx2" secondAttribute="leadingMargin" constant="9" id="KJp-Qs-a7W"/>
+                            <constraint firstItem="9Zw-4r-T55" firstAttribute="trailing" secondItem="oYh-Qo-AH9" secondAttribute="trailing" id="NVz-AH-70R"/>
+                            <constraint firstItem="oYh-Qo-AH9" firstAttribute="trailing" secondItem="Cmd-WY-vid" secondAttribute="trailing" id="PUb-j5-Xvd"/>
+                            <constraint firstItem="aW8-BL-Aei" firstAttribute="leading" secondItem="Mek-c0-Tx2" secondAttribute="leadingMargin" constant="28" id="Pwp-8l-WoH"/>
+                            <constraint firstItem="TiL-RP-Ru9" firstAttribute="top" secondItem="0d7-SE-AdC" secondAttribute="bottom" constant="8" symbolic="YES" id="Rog-KO-RXR"/>
+                            <constraint firstItem="i6h-kS-Hsv" firstAttribute="top" secondItem="Cmd-WY-vid" secondAttribute="bottom" constant="8" symbolic="YES" id="SRF-h8-7bn"/>
+                            <constraint firstItem="C6Q-80-BdK" firstAttribute="top" secondItem="TiL-RP-Ru9" secondAttribute="bottom" constant="35" id="VbX-vn-8cA"/>
+                            <constraint firstItem="Cmd-WY-vid" firstAttribute="trailing" secondItem="q2y-Gv-QvK" secondAttribute="trailing" id="WpE-Nv-PS4"/>
+                            <constraint firstItem="q2y-Gv-QvK" firstAttribute="top" secondItem="i6h-kS-Hsv" secondAttribute="bottom" constant="30" id="YKH-fm-KpV"/>
+                            <constraint firstItem="EmG-xj-3NO" firstAttribute="trailing" secondItem="0d7-SE-AdC" secondAttribute="trailing" id="avO-aO-jJP"/>
                             <constraint firstItem="hqt-p4-X1u" firstAttribute="centerY" secondItem="Mek-c0-Tx2" secondAttribute="centerY" id="b95-LS-D5m"/>
                             <constraint firstItem="hqt-p4-X1u" firstAttribute="width" secondItem="Mek-c0-Tx2" secondAttribute="width" id="cYo-xZ-QRG"/>
+                            <constraint firstItem="oYh-Qo-AH9" firstAttribute="leading" secondItem="Cmd-WY-vid" secondAttribute="leading" id="cqb-64-JXO"/>
                             <constraint firstItem="hqt-p4-X1u" firstAttribute="leading" secondItem="Mek-c0-Tx2" secondAttribute="leadingMargin" constant="-16" id="fBv-Yl-JzU"/>
+                            <constraint firstItem="9Zw-4r-T55" firstAttribute="leading" secondItem="oYh-Qo-AH9" secondAttribute="leading" id="gMq-me-m5m"/>
+                            <constraint firstItem="6le-nu-Gch" firstAttribute="leading" secondItem="TiL-RP-Ru9" secondAttribute="leading" id="gTd-wK-Epd"/>
+                            <constraint firstItem="i6h-kS-Hsv" firstAttribute="trailing" secondItem="IFx-iz-6WM" secondAttribute="trailing" id="h46-gX-fzW"/>
+                            <constraint firstItem="Cmd-WY-vid" firstAttribute="top" secondItem="1mP-xq-khi" secondAttribute="bottom" constant="32" id="kch-Cq-zas"/>
+                            <constraint firstItem="IFx-iz-6WM" firstAttribute="top" secondItem="q2y-Gv-QvK" secondAttribute="bottom" constant="8" symbolic="YES" id="s1e-ey-9L6"/>
+                            <constraint firstItem="aW8-BL-Aei" firstAttribute="leading" secondItem="1mP-xq-khi" secondAttribute="leading" id="sGb-v4-1UO"/>
+                            <constraint firstItem="1mP-xq-khi" firstAttribute="trailing" secondItem="i6h-kS-Hsv" secondAttribute="trailing" id="uKz-Pf-cq7"/>
+                            <constraint firstItem="q2y-Gv-QvK" firstAttribute="leading" secondItem="EmG-xj-3NO" secondAttribute="leading" id="up7-FR-drh"/>
+                            <constraint firstItem="6le-nu-Gch" firstAttribute="top" secondItem="EmG-xj-3NO" secondAttribute="bottom" constant="8" symbolic="YES" id="weh-cS-ERi"/>
+                            <constraint firstItem="IFx-iz-6WM" firstAttribute="leading" secondItem="6le-nu-Gch" secondAttribute="leading" id="xnP-SZ-Cya"/>
+                            <constraint firstItem="IFx-iz-6WM" firstAttribute="trailing" secondItem="6le-nu-Gch" secondAttribute="trailing" id="z14-SZ-zfN"/>
+                            <constraint firstItem="1mP-xq-khi" firstAttribute="top" secondItem="oYh-Qo-AH9" secondAttribute="bottom" constant="8" id="zdP-su-JuR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -355,13 +500,155 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseButtonsDarker_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rWN-DS-XGi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW0-yE-X05">
+                                <rect key="frame" x="42" y="380" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dn3-Pi-1oy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Cá bhfuil an óstán?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b62-Yu-9KE">
+                                <rect key="frame" x="23" y="431" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jI5-c5-Fwm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgp-mJ-W5e">
+                                <rect key="frame" x="42" y="611" width="202" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Cá bhfuil an craic?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-wJ-u6i">
+                                <rect key="frame" x="23" y="506" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CKV-hG-PyW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMt-80-XI1">
+                                <rect key="frame" x="42" y="298" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="x6E-dO-KPt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Cé mhead?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC8-Eq-RBL">
+                                <rect key="frame" x="23" y="582" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8Gx-BV-Vvh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKw-FI-mwA">
+                                <rect key="frame" x="42" y="221" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="P1n-4i-3SE"/>
+                                    <constraint firstAttribute="height" constant="21" id="smM-fK-jpg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Pierre is ainm dom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSd-SF-ZuY">
+                                <rect key="frame" x="23" y="351" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6bZ-Sy-ne4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the craic?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Co-dX-YY8">
+                                <rect key="frame" x="42" y="535" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="nK5-qc-Bch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Cad is ainm duit?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAa-J4-GhJ">
+                                <rect key="frame" x="23" y="269" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lFC-G7-2Bo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the hotel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-K0-1EP">
+                                <rect key="frame" x="42" y="460" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5l9-Rw-h7z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Dia duit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1I-MX-xwL">
+                                <rect key="frame" x="23" y="192" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="75i-FJ-KY0"/>
+                                    <constraint firstAttribute="height" constant="21" id="aht-wu-dk2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fKs-K0-1EP" firstAttribute="leading" secondItem="2Co-dX-YY8" secondAttribute="leading" id="1S9-Pi-Gtm"/>
+                            <constraint firstItem="XW0-yE-X05" firstAttribute="top" secondItem="oSd-SF-ZuY" secondAttribute="bottom" constant="8" symbolic="YES" id="1bS-1n-SFb"/>
+                            <constraint firstItem="2Co-dX-YY8" firstAttribute="top" secondItem="Kg1-wJ-u6i" secondAttribute="bottom" constant="8" symbolic="YES" id="4uf-HQ-1x3"/>
+                            <constraint firstItem="Kg1-wJ-u6i" firstAttribute="leading" secondItem="MC8-Eq-RBL" secondAttribute="leading" id="6gg-eh-s9I"/>
+                            <constraint firstItem="oSd-SF-ZuY" firstAttribute="leading" secondItem="b62-Yu-9KE" secondAttribute="leading" id="6x4-LE-5Tc"/>
+                            <constraint firstItem="XW0-yE-X05" firstAttribute="trailing" secondItem="fKs-K0-1EP" secondAttribute="trailing" id="B9B-Fn-mao"/>
+                            <constraint firstItem="fKs-K0-1EP" firstAttribute="trailing" secondItem="2Co-dX-YY8" secondAttribute="trailing" id="BKs-Xk-S6H"/>
+                            <constraint firstItem="oSd-SF-ZuY" firstAttribute="top" secondItem="sMt-80-XI1" secondAttribute="bottom" constant="32" id="EKN-EQ-NOF"/>
+                            <constraint firstItem="b62-Yu-9KE" firstAttribute="top" secondItem="XW0-yE-X05" secondAttribute="bottom" constant="30" id="I4p-Od-Ay8"/>
+                            <constraint firstItem="Kg1-wJ-u6i" firstAttribute="trailing" secondItem="MC8-Eq-RBL" secondAttribute="trailing" id="IY6-oH-j5a"/>
+                            <constraint firstItem="PAa-J4-GhJ" firstAttribute="trailing" secondItem="oSd-SF-ZuY" secondAttribute="trailing" id="IZA-4s-Tzw"/>
+                            <constraint firstItem="h1I-MX-xwL" firstAttribute="top" secondItem="igx-ox-VFC" secondAttribute="bottom" constant="128" id="Inr-ae-uOu"/>
+                            <constraint firstItem="2Co-dX-YY8" firstAttribute="leading" secondItem="fgp-mJ-W5e" secondAttribute="leading" id="JJd-Bh-7oB"/>
+                            <constraint firstItem="h1I-MX-xwL" firstAttribute="leading" secondItem="3IR-Ut-7Mx" secondAttribute="leadingMargin" constant="7" id="JLg-b0-gWC"/>
+                            <constraint firstItem="MC8-Eq-RBL" firstAttribute="top" secondItem="2Co-dX-YY8" secondAttribute="bottom" constant="26" id="JYP-RE-t26"/>
                             <constraint firstItem="rWN-DS-XGi" firstAttribute="width" secondItem="3IR-Ut-7Mx" secondAttribute="width" id="L04-Jn-a8E"/>
+                            <constraint firstItem="sMt-80-XI1" firstAttribute="trailing" secondItem="XW0-yE-X05" secondAttribute="trailing" id="MLi-U8-ada"/>
+                            <constraint firstItem="h1I-MX-xwL" firstAttribute="leading" secondItem="PAa-J4-GhJ" secondAttribute="leading" id="MVF-A8-tdB"/>
                             <constraint firstItem="rWN-DS-XGi" firstAttribute="centerY" secondItem="3IR-Ut-7Mx" secondAttribute="centerY" id="OrX-Oy-r0v"/>
+                            <constraint firstItem="VKw-FI-mwA" firstAttribute="leading" secondItem="3IR-Ut-7Mx" secondAttribute="leadingMargin" constant="26" id="RhK-MS-dKm"/>
+                            <constraint firstItem="PAa-J4-GhJ" firstAttribute="leading" secondItem="oSd-SF-ZuY" secondAttribute="leading" id="UsB-gw-F0l"/>
+                            <constraint firstItem="XW0-yE-X05" firstAttribute="leading" secondItem="fKs-K0-1EP" secondAttribute="leading" id="ZLp-rK-vld"/>
+                            <constraint firstItem="b62-Yu-9KE" firstAttribute="leading" secondItem="Kg1-wJ-u6i" secondAttribute="leading" id="ci8-jF-2gB"/>
+                            <constraint firstItem="Kg1-wJ-u6i" firstAttribute="top" secondItem="fKs-K0-1EP" secondAttribute="bottom" constant="25" id="d9e-uY-4RN"/>
                             <constraint firstItem="rWN-DS-XGi" firstAttribute="centerX" secondItem="3IR-Ut-7Mx" secondAttribute="centerX" id="dSE-QZ-CtI"/>
+                            <constraint firstItem="PAa-J4-GhJ" firstAttribute="top" secondItem="VKw-FI-mwA" secondAttribute="bottom" constant="27" id="e9w-hp-roL"/>
+                            <constraint firstItem="4ls-nC-6g3" firstAttribute="top" secondItem="fgp-mJ-W5e" secondAttribute="bottom" constant="35" id="egQ-Fc-HeV"/>
+                            <constraint firstItem="VKw-FI-mwA" firstAttribute="trailing" secondItem="sMt-80-XI1" secondAttribute="trailing" id="fS2-Xp-W0y"/>
+                            <constraint firstItem="sMt-80-XI1" firstAttribute="top" secondItem="PAa-J4-GhJ" secondAttribute="bottom" constant="8" id="jHh-dy-T3z"/>
                             <constraint firstItem="rWN-DS-XGi" firstAttribute="height" secondItem="3IR-Ut-7Mx" secondAttribute="height" id="l0v-dW-3Km"/>
+                            <constraint firstItem="fKs-K0-1EP" firstAttribute="top" secondItem="b62-Yu-9KE" secondAttribute="bottom" constant="8" symbolic="YES" id="o5g-Eq-8q2"/>
+                            <constraint firstItem="oSd-SF-ZuY" firstAttribute="trailing" secondItem="b62-Yu-9KE" secondAttribute="trailing" id="oHA-zB-AHa"/>
+                            <constraint firstItem="b62-Yu-9KE" firstAttribute="trailing" secondItem="Kg1-wJ-u6i" secondAttribute="trailing" id="pFd-XP-CsQ"/>
+                            <constraint firstItem="VKw-FI-mwA" firstAttribute="top" secondItem="h1I-MX-xwL" secondAttribute="bottom" constant="8" id="qmh-VI-ge6"/>
+                            <constraint firstItem="VKw-FI-mwA" firstAttribute="leading" secondItem="sMt-80-XI1" secondAttribute="leading" id="rMJ-3q-7Px"/>
+                            <constraint firstItem="sMt-80-XI1" firstAttribute="leading" secondItem="XW0-yE-X05" secondAttribute="leading" id="yRg-2L-aPW"/>
+                            <constraint firstItem="2Co-dX-YY8" firstAttribute="trailing" secondItem="fgp-mJ-W5e" secondAttribute="trailing" id="zHl-k1-DBZ"/>
+                            <constraint firstItem="h1I-MX-xwL" firstAttribute="trailing" secondItem="PAa-J4-GhJ" secondAttribute="trailing" id="zLv-uU-Kkz"/>
+                            <constraint firstItem="fgp-mJ-W5e" firstAttribute="top" secondItem="MC8-Eq-RBL" secondAttribute="bottom" constant="8" symbolic="YES" id="zVv-hA-kMj"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -384,12 +671,154 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseButtonsDarker_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c3b-Md-ecG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvl-N6-hB3">
+                                <rect key="frame" x="46" y="385" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="y7M-eX-1jR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Otel nerede?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLf-7Y-5Pb">
+                                <rect key="frame" x="27" y="436" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5m0-5P-X7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qew-ur-2hR">
+                                <rect key="frame" x="46" y="616" width="202" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Evet/Yok hayir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJg-pp-aEZ">
+                                <rect key="frame" x="27" y="511" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="aNe-jj-eDf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kt-Qh-uev">
+                                <rect key="frame" x="46" y="303" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xyO-VW-ioT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Ne kadar?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hN-Dy-Trw">
+                                <rect key="frame" x="27" y="587" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wv3-s0-lpb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8a-4m-ZQY">
+                                <rect key="frame" x="46" y="226" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FuB-Lu-xdG"/>
+                                    <constraint firstAttribute="width" constant="202" id="oIA-DO-d3i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Beinm adim Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9r-L9-Ntw">
+                                <rect key="frame" x="27" y="356" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UbH-1b-Vfb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes/No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-w3-ZIH">
+                                <rect key="frame" x="46" y="540" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="V3L-0P-j4N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Adin ne?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kC-j0-6wE">
+                                <rect key="frame" x="27" y="274" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="iwi-cR-gPO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the hotel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ev-av-jbJ">
+                                <rect key="frame" x="46" y="465" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zYi-Th-Uhq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Merhaba" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-Yl-hSi">
+                                <rect key="frame" x="27" y="197" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="0SH-Tx-QxB"/>
+                                    <constraint firstAttribute="height" constant="21" id="jyf-1L-UvX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="c3b-Md-ecG" firstAttribute="centerX" secondItem="EXJ-0N-du8" secondAttribute="centerX" id="1ZY-LI-Ard"/>
+                            <constraint firstItem="kvl-N6-hB3" firstAttribute="leading" secondItem="1ev-av-jbJ" secondAttribute="leading" id="1t2-mM-Xhi"/>
+                            <constraint firstItem="MLf-7Y-5Pb" firstAttribute="top" secondItem="kvl-N6-hB3" secondAttribute="bottom" constant="30" id="2rw-wH-i3r"/>
+                            <constraint firstItem="1Kt-Qh-uev" firstAttribute="top" secondItem="2kC-j0-6wE" secondAttribute="bottom" constant="8" id="2ta-4s-d5e"/>
+                            <constraint firstItem="Hxe-Yl-hSi" firstAttribute="leading" secondItem="2kC-j0-6wE" secondAttribute="leading" id="4M8-cV-8G6"/>
+                            <constraint firstItem="Z4I-w3-ZIH" firstAttribute="leading" secondItem="qew-ur-2hR" secondAttribute="leading" id="5ep-9A-ZQi"/>
+                            <constraint firstItem="Hxe-Yl-hSi" firstAttribute="leading" secondItem="EXJ-0N-du8" secondAttribute="leadingMargin" constant="11" id="823-DL-Cyk"/>
+                            <constraint firstItem="1Kt-Qh-uev" firstAttribute="trailing" secondItem="kvl-N6-hB3" secondAttribute="trailing" id="8ak-9B-YD2"/>
+                            <constraint firstItem="2kC-j0-6wE" firstAttribute="leading" secondItem="I9r-L9-Ntw" secondAttribute="leading" id="9Sj-Nf-yyc"/>
+                            <constraint firstItem="7sP-nz-qv7" firstAttribute="top" secondItem="qew-ur-2hR" secondAttribute="bottom" constant="30" id="AKa-xG-guH"/>
+                            <constraint firstItem="Z4I-w3-ZIH" firstAttribute="trailing" secondItem="qew-ur-2hR" secondAttribute="trailing" id="B7J-AG-bdO"/>
+                            <constraint firstItem="MLf-7Y-5Pb" firstAttribute="leading" secondItem="CJg-pp-aEZ" secondAttribute="leading" id="BGv-25-pT8"/>
                             <constraint firstItem="c3b-Md-ecG" firstAttribute="centerY" secondItem="EXJ-0N-du8" secondAttribute="centerY" id="BIT-xq-Hm2"/>
+                            <constraint firstItem="d8a-4m-ZQY" firstAttribute="leading" secondItem="EXJ-0N-du8" secondAttribute="leadingMargin" constant="30" id="BhG-Jm-RKd"/>
+                            <constraint firstItem="d8a-4m-ZQY" firstAttribute="top" secondItem="Hxe-Yl-hSi" secondAttribute="bottom" constant="8" id="CfE-uA-YWc"/>
+                            <constraint firstItem="Hxe-Yl-hSi" firstAttribute="top" secondItem="PYA-xk-Ui9" secondAttribute="bottom" constant="133" id="FRz-39-SIw"/>
+                            <constraint firstItem="1ev-av-jbJ" firstAttribute="leading" secondItem="Z4I-w3-ZIH" secondAttribute="leading" id="GGU-l3-o1b"/>
+                            <constraint firstItem="2kC-j0-6wE" firstAttribute="trailing" secondItem="I9r-L9-Ntw" secondAttribute="trailing" id="Jza-kU-JGr"/>
+                            <constraint firstItem="5hN-Dy-Trw" firstAttribute="top" secondItem="Z4I-w3-ZIH" secondAttribute="bottom" constant="26" id="KWC-tl-flO"/>
+                            <constraint firstItem="CJg-pp-aEZ" firstAttribute="trailing" secondItem="5hN-Dy-Trw" secondAttribute="trailing" id="OAS-4L-5R2"/>
                             <constraint firstItem="c3b-Md-ecG" firstAttribute="height" secondItem="EXJ-0N-du8" secondAttribute="height" id="Orh-sV-rgK"/>
+                            <constraint firstItem="1ev-av-jbJ" firstAttribute="top" secondItem="MLf-7Y-5Pb" secondAttribute="bottom" constant="8" symbolic="YES" id="Oxj-ms-Wip"/>
+                            <constraint firstItem="1Kt-Qh-uev" firstAttribute="leading" secondItem="kvl-N6-hB3" secondAttribute="leading" id="QMt-0e-Z9x"/>
+                            <constraint firstItem="d8a-4m-ZQY" firstAttribute="leading" secondItem="1Kt-Qh-uev" secondAttribute="leading" id="Qod-MH-rnw"/>
+                            <constraint firstItem="CJg-pp-aEZ" firstAttribute="top" secondItem="1ev-av-jbJ" secondAttribute="bottom" constant="25" id="SgO-El-VcK"/>
+                            <constraint firstItem="qew-ur-2hR" firstAttribute="top" secondItem="5hN-Dy-Trw" secondAttribute="bottom" constant="8" symbolic="YES" id="TAA-Lz-tQC"/>
+                            <constraint firstItem="CJg-pp-aEZ" firstAttribute="leading" secondItem="5hN-Dy-Trw" secondAttribute="leading" id="TDS-hp-JNA"/>
+                            <constraint firstItem="kvl-N6-hB3" firstAttribute="trailing" secondItem="1ev-av-jbJ" secondAttribute="trailing" id="ZxM-UZ-xG6"/>
+                            <constraint firstItem="I9r-L9-Ntw" firstAttribute="top" secondItem="1Kt-Qh-uev" secondAttribute="bottom" constant="32" id="aXW-Ua-I4y"/>
+                            <constraint firstItem="I9r-L9-Ntw" firstAttribute="leading" secondItem="MLf-7Y-5Pb" secondAttribute="leading" id="bGF-xN-oXl"/>
+                            <constraint firstItem="kvl-N6-hB3" firstAttribute="top" secondItem="I9r-L9-Ntw" secondAttribute="bottom" constant="8" symbolic="YES" id="ctm-ph-SZy"/>
+                            <constraint firstItem="d8a-4m-ZQY" firstAttribute="trailing" secondItem="1Kt-Qh-uev" secondAttribute="trailing" id="gn3-t7-8x0"/>
+                            <constraint firstItem="I9r-L9-Ntw" firstAttribute="trailing" secondItem="MLf-7Y-5Pb" secondAttribute="trailing" id="gsv-Ec-vii"/>
+                            <constraint firstItem="MLf-7Y-5Pb" firstAttribute="trailing" secondItem="CJg-pp-aEZ" secondAttribute="trailing" id="ivw-d0-htm"/>
+                            <constraint firstItem="2kC-j0-6wE" firstAttribute="top" secondItem="d8a-4m-ZQY" secondAttribute="bottom" constant="27" id="jAQ-7k-be8"/>
+                            <constraint firstItem="1ev-av-jbJ" firstAttribute="trailing" secondItem="Z4I-w3-ZIH" secondAttribute="trailing" id="ru3-Q7-NlI"/>
+                            <constraint firstItem="Hxe-Yl-hSi" firstAttribute="trailing" secondItem="2kC-j0-6wE" secondAttribute="trailing" id="uOE-r1-Hzv"/>
+                            <constraint firstItem="Z4I-w3-ZIH" firstAttribute="top" secondItem="CJg-pp-aEZ" secondAttribute="bottom" constant="8" symbolic="YES" id="vep-YO-ua5"/>
                             <constraint firstItem="c3b-Md-ecG" firstAttribute="width" secondItem="EXJ-0N-du8" secondAttribute="width" id="wFs-8s-YDa"/>
                         </constraints>
                     </view>
@@ -413,13 +842,151 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseButtonsDarker_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1O7-3D-JWB">
                                 <rect key="frame" x="0.0" y="7" width="375" height="660"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE9-JQ-2Gc">
+                                <rect key="frame" x="45" y="221" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UhT-5r-Dtu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYb-WF-ky6">
+                                <rect key="frame" x="45" y="298" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="huT-zW-6Q1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Comment tu t'appelle?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E07-Qa-Txa">
+                                <rect key="frame" x="26" y="269" width="202" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysp-EV-krP">
+                                <rect key="frame" x="45" y="380" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="F8m-78-mM6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Je m'appelle Pierre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jQ-jo-l81">
+                                <rect key="frame" x="26" y="351" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eWR-aa-lkG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is the hotel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waL-fx-OOF">
+                                <rect key="frame" x="45" y="460" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ez1-yq-YNU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Oú est l'hotel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9n-bg-REO">
+                                <rect key="frame" x="26" y="431" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="K0w-Xa-8fu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes/No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb5-V2-i8f">
+                                <rect key="frame" x="45" y="535" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WJ9-lU-QV1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Oui/Non" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvi-g2-2EB">
+                                <rect key="frame" x="26" y="506" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bjy-v1-3fg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-Be-8k9">
+                                <rect key="frame" x="45" y="611" width="202" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-BoldItalic" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Combien?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0I-3j-gsD">
+                                <rect key="frame" x="26" y="582" width="202" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hIc-im-DD8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Bonjour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFA-Xz-Oh2">
+                                <rect key="frame" x="26" y="192" width="202" height="21"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1O7-3D-JWB" firstAttribute="leading" secondItem="LFA-Xz-Oh2" secondAttribute="trailing" constant="-228" id="2ml-8S-wRX"/>
+                            <constraint firstItem="Xvi-g2-2EB" firstAttribute="trailing" secondItem="x0I-3j-gsD" secondAttribute="trailing" id="3PG-5z-m2F"/>
+                            <constraint firstItem="ysp-EV-krP" firstAttribute="leading" secondItem="waL-fx-OOF" secondAttribute="leading" id="4L6-Ra-S8e"/>
+                            <constraint firstItem="LFA-Xz-Oh2" firstAttribute="top" secondItem="MrZ-3H-Dhg" secondAttribute="bottom" constant="128" id="4mu-Pw-Con"/>
+                            <constraint firstItem="1jQ-jo-l81" firstAttribute="trailing" secondItem="a9n-bg-REO" secondAttribute="trailing" id="4zo-jN-nqn"/>
+                            <constraint firstItem="ysp-EV-krP" firstAttribute="top" secondItem="1jQ-jo-l81" secondAttribute="bottom" constant="8" symbolic="YES" id="7Dl-8z-ZkI"/>
                             <constraint firstItem="1O7-3D-JWB" firstAttribute="centerX" secondItem="gzh-UT-5iS" secondAttribute="centerX" id="AfZ-4G-gVl"/>
                             <constraint firstItem="1O7-3D-JWB" firstAttribute="top" secondItem="MrZ-3H-Dhg" secondAttribute="bottom" constant="-57" id="Ahn-P9-0jP"/>
+                            <constraint firstItem="ZE9-JQ-2Gc" firstAttribute="leading" secondItem="AYb-WF-ky6" secondAttribute="leading" id="ETD-KD-tc8"/>
+                            <constraint firstItem="AYb-WF-ky6" firstAttribute="top" secondItem="E07-Qa-Txa" secondAttribute="bottom" constant="8" id="FA7-gS-aRC"/>
+                            <constraint firstItem="A6a-Wv-tdN" firstAttribute="top" secondItem="Ckb-Be-8k9" secondAttribute="bottom" constant="35" id="GAZ-Pg-Cml"/>
+                            <constraint firstItem="Hb5-V2-i8f" firstAttribute="trailing" secondItem="Ckb-Be-8k9" secondAttribute="trailing" id="HgN-El-gBf"/>
+                            <constraint firstItem="1jQ-jo-l81" firstAttribute="top" secondItem="AYb-WF-ky6" secondAttribute="bottom" constant="32" id="HhH-cj-Tya"/>
+                            <constraint firstItem="a9n-bg-REO" firstAttribute="leading" secondItem="Xvi-g2-2EB" secondAttribute="leading" id="HvI-xW-fy0"/>
                             <constraint firstItem="A6a-Wv-tdN" firstAttribute="top" secondItem="1O7-3D-JWB" secondAttribute="bottom" id="I6b-HK-07T"/>
+                            <constraint firstItem="Hb5-V2-i8f" firstAttribute="top" secondItem="Xvi-g2-2EB" secondAttribute="bottom" constant="8" symbolic="YES" id="IZq-I3-JuA"/>
+                            <constraint firstItem="ZE9-JQ-2Gc" firstAttribute="leading" secondItem="gzh-UT-5iS" secondAttribute="leadingMargin" constant="29" id="Qpr-yv-UXx"/>
+                            <constraint firstItem="x0I-3j-gsD" firstAttribute="top" secondItem="Hb5-V2-i8f" secondAttribute="bottom" constant="26" id="Rx1-th-kaD"/>
+                            <constraint firstItem="Hb5-V2-i8f" firstAttribute="leading" secondItem="Ckb-Be-8k9" secondAttribute="leading" id="TQr-XX-Csv"/>
+                            <constraint firstItem="AYb-WF-ky6" firstAttribute="leading" secondItem="ysp-EV-krP" secondAttribute="leading" id="TpH-ay-8FR"/>
+                            <constraint firstItem="1O7-3D-JWB" firstAttribute="top" secondItem="LFA-Xz-Oh2" secondAttribute="bottom" constant="-206" id="Uhr-A6-HQx"/>
+                            <constraint firstItem="E07-Qa-Txa" firstAttribute="leading" secondItem="1jQ-jo-l81" secondAttribute="leading" id="W4Y-Xv-YrC"/>
+                            <constraint firstItem="LFA-Xz-Oh2" firstAttribute="leading" secondItem="E07-Qa-Txa" secondAttribute="leading" id="WUM-Yc-ZEn"/>
+                            <constraint firstItem="Xvi-g2-2EB" firstAttribute="leading" secondItem="x0I-3j-gsD" secondAttribute="leading" id="XKx-LN-uPb"/>
+                            <constraint firstItem="ysp-EV-krP" firstAttribute="trailing" secondItem="waL-fx-OOF" secondAttribute="trailing" id="XMZ-4u-c0F"/>
+                            <constraint firstItem="1O7-3D-JWB" firstAttribute="top" secondItem="E07-Qa-Txa" secondAttribute="bottom" constant="-283" id="Z9S-3N-JhM"/>
+                            <constraint firstItem="a9n-bg-REO" firstAttribute="top" secondItem="ysp-EV-krP" secondAttribute="bottom" constant="30" id="aiO-0P-mdV"/>
+                            <constraint firstItem="1jQ-jo-l81" firstAttribute="leading" secondItem="a9n-bg-REO" secondAttribute="leading" id="cb9-bm-Hnf"/>
+                            <constraint firstItem="1O7-3D-JWB" firstAttribute="leading" secondItem="ZE9-JQ-2Gc" secondAttribute="trailing" constant="-247" id="eZi-jq-h74"/>
+                            <constraint firstItem="a9n-bg-REO" firstAttribute="trailing" secondItem="Xvi-g2-2EB" secondAttribute="trailing" id="f45-Eq-0Va"/>
+                            <constraint firstItem="waL-fx-OOF" firstAttribute="leading" secondItem="Hb5-V2-i8f" secondAttribute="leading" id="g1p-V7-xxo"/>
+                            <constraint firstItem="AYb-WF-ky6" firstAttribute="trailing" secondItem="ysp-EV-krP" secondAttribute="trailing" id="gaB-sP-RL6"/>
+                            <constraint firstItem="ZE9-JQ-2Gc" firstAttribute="top" secondItem="LFA-Xz-Oh2" secondAttribute="bottom" constant="8" id="hCn-e2-3DA"/>
+                            <constraint firstItem="1O7-3D-JWB" firstAttribute="leading" secondItem="E07-Qa-Txa" secondAttribute="trailing" constant="-228" id="hNC-rb-CqF"/>
+                            <constraint firstItem="waL-fx-OOF" firstAttribute="trailing" secondItem="Hb5-V2-i8f" secondAttribute="trailing" id="jVK-bF-xyT"/>
+                            <constraint firstItem="waL-fx-OOF" firstAttribute="top" secondItem="a9n-bg-REO" secondAttribute="bottom" constant="8" symbolic="YES" id="kaf-oR-zNd"/>
+                            <constraint firstItem="LFA-Xz-Oh2" firstAttribute="leading" secondItem="gzh-UT-5iS" secondAttribute="leadingMargin" constant="10" id="lkd-R4-Lvh"/>
+                            <constraint firstItem="E07-Qa-Txa" firstAttribute="top" secondItem="ZE9-JQ-2Gc" secondAttribute="bottom" constant="27" id="mBQ-2l-Gm2"/>
+                            <constraint firstItem="Xvi-g2-2EB" firstAttribute="top" secondItem="waL-fx-OOF" secondAttribute="bottom" constant="25" id="mo0-dk-qxb"/>
+                            <constraint firstItem="E07-Qa-Txa" firstAttribute="trailing" secondItem="1jQ-jo-l81" secondAttribute="trailing" id="nyK-8D-jqg"/>
+                            <constraint firstItem="ZE9-JQ-2Gc" firstAttribute="trailing" secondItem="AYb-WF-ky6" secondAttribute="trailing" id="pwE-Mf-oNT"/>
                             <constraint firstItem="1O7-3D-JWB" firstAttribute="leading" secondItem="gzh-UT-5iS" secondAttribute="leadingMargin" constant="-16" id="qo4-Me-OOf"/>
+                            <constraint firstItem="Ckb-Be-8k9" firstAttribute="top" secondItem="x0I-3j-gsD" secondAttribute="bottom" constant="8" symbolic="YES" id="uMj-X1-3XH"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -432,7 +999,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9Z-Ht-FN8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OVC-7a-R34">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OVC-7a-R34">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
