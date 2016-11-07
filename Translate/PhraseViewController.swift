@@ -10,6 +10,10 @@ import UIKit
 
 class PhraseViewController: UIViewController {
     var backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+    
+    // English Phrases
+    // Dictionary/Array of French
+    // "" Turkish
 
     override func viewDidLoad() {
         super.viewDidLoad()
