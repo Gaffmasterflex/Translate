@@ -29,6 +29,10 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationItem.title = "Home"
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.barTintColor = phrasesButton.backgroundColor
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Ubuntu-Bold", size: 20)!,NSForegroundColorAttributeName: UIColor.white]
+
         backgroundImage.image = UIImage(named: Bundle.main.path(forResource: backgroundImages[Int(getRandomPicture())], ofType: imageExtension)!)
         self.view.insertSubview(backgroundImage, at: 0)
     }
