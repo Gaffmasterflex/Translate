@@ -27,7 +27,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     //toast label for when user tries to translate empty message
     
     //source/destination arrays
-    var pickerLanguages: [[String]] = [["Gaelic","French","Turkish","English"],["Gaelic","French","Turkish","English"]] //data for picker
+    var pickerLanguages: [[String]] = [["English","French","Gaelic","Turkish"],["English","French","Gaelic","Turkish"]] //data for picker
     
     var languageDictonary : [String : String] = ["French" : "fr","Turkish" : "tr","Gaelic" : "ga","English" : "en"]
     
@@ -40,8 +40,8 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
     var rowOfSourceLanguageSelection = 0  //used to access the data array at the user specified index
     var rowOfDestLanguageSelection = 0
     //index of selected language
-    var indexOfSourceLanguage = 3   //start as english 
-    var indexOfDestLanguage = 0
+    var indexOfSourceLanguage = 0 //start as english
+    var indexOfDestLanguage = 3
     //placeholders for uitext elements
     let textToTranslatePlaceholder = "Text to Translate....."
     let translatedTextPlaceHolder = "Translated Text....."
